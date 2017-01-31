@@ -292,27 +292,140 @@ is singular for three values of $a$.
 \vspace{5mm}
 \textbf{Chapter 2.5}
 \begin{enumerate}
-\item[2.5.7]
-\item[2.5.13]
-\item[2.5.29]
-\item[2.5.30]
-\item[2.5.31]
+\item[2.5.7] (Important) If $A$ has row $1 +$ row $3$, show that $A$ is  not invertible: \\
+(a.) Explain why $Ax = (1, 0, 0)$ cannot have a solution. \\
+(b.) Which right sides $(b_1, b_2, b_3)$ might allow a solution to $Ax = b$?\\
+(c.) What happens to row 3 in elimination?\\
+\item[2.5.13] If the product $M = ABC$ of three wquare matries is invertible, then $B$ is invertible. \\
+(So are $A$ and $C$.) Find a formula for $B^{-1}$ that involves $M^{-1}$ and $A$ and $C$.\\
+\item[2.5.29] True or false (with a counterexample if false and a reason if true):\\
+(a) A 4 by 4 matrix with a row of zeros is not invertible.\\
+(b) Every matrix with 1's down the main diagonal is invertible.\\
+(c) If $A$ is invertible then $A^{-1}$ and $A^2$ are invertible.\\
+\item[2.5.30] For which three numbers $c$ is this matrix not invertible, and why not?\\
+\begin{center}
+$
+$$
+A=
+\begin{bmatrix}
+2&c&c\\
+c&c&c\\
+8&7&c\\
+\end{bmatrix}
+$$
+$
+\end{center}
+\item[2.5.31] Prove that $A$ is invertible if $a\neq 0$ and $a \neq b$ (find the pivots or $A^{-1}$):\\
+\begin{center}
+$
+$$
+A=
+\begin{bmatrix}
+a&b&b\\
+a&a&b\\
+a&a&a\\
+\end{bmatrix}
+$$
+$
+\end{center}
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.6}
 \begin{enumerate}
-\item[2.6.7]
-\item[2.6.8]
-\item[2.6.13]
-\item[2.6.16]
+\item[2.6.7] What three eleimination matrices $E_{21}, E_{31}, E_{32}$ put $A$ into its upper triangular form $E_{21}, E_{31}, E_{32}A = U$? Multiply by $E_{32}^{-1}, E_{31}^{-1}$ and  $E_{21}^{-1}$ to factor $A$ into $L$ times $U$:\\
+\begin{center}
+$
+$$
+A=
+\begin{bmatrix}
+1&0&1\\
+2&2&2\\
+3&4&5\\
+\end{bmatrix}
+$$
+$
+$L = E_{32}^{-1} E_{31}^{-1} E_{21}^{-1}$\\
+\end{center}
+\item[2.6.8] Suppose $A$ is already lower trianglular with 1's on the diagonal. Then $U = I$!\\
+\begin{center}
+$
+$$
+A= L=
+\begin{bmatrix}
+1&0&0\\
+a&1&0\\
+b&c&0\\
+\end{bmatrix}
+$$
+$
+\end{center}
+The elimination matrices $E_{21}, E_{31}, E_{32}$ contain -a then -b then -c.\\
+(a) Multiply $E_{32}, E_{31}, E_{21}$ to find the single matric $E$ that produces $EA = I$.\\
+(b) Multiply $E_{21}^{-1} E_{31}^{-1} E_{32}^{-1}$ to bring back $L$ (nicer than $E$).\\
+\item[2.6.13] Compute $L$ and $U$ for the symmetric matrix $A$:\\
+\begin{center}
+$
+$$
+A=
+\begin{bmatrix}
+a&r&r&r\\
+a&b&s&s\\
+a&b&c&t\\
+a&b&c&d\\
+\end{bmatrix}
+$$
+$
+\end{center}
+Find four conditions on $a, b, c, d$ to get $A = LU$ with four pivots.\\
+\item[2.6.16] Solve $L\pmb{c} = \pmb{b}$ to find $\pmb{c}$. Then solve $U\pmb{x} = \pmb{c}$ to find $\pmb{x}$. \textbf{What was} $A$?\\
+\begin{center}
+$
+$$
+L=
+\begin{bmatrix}
+1&0&0\\
+1&1&0\\
+1&1&1\\
+\end{bmatrix}
+$$
+$
+and
+$
+$$
+U =
+\begin{bmatrix}
+1&1&1\\
+0&1&1\\
+0&0&1\\
+\end{bmatrix}
+$$
+$
+and 
+$
+$$
+\pmb{b} =
+\begin{bmatrix}
+4\\
+5\\
+6\\
+\end{bmatrix}
+$$
+$
+\end{center}
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.7}
 \begin{enumerate}
-\item[2.7.3]
-\item[2.7.6]
-\item[2.7.16]
-\item[2.7.31]
-\item[2.7.40]
+\item[2.7.3] (a) The matrix $((AB)^{-1})^T$ comes from $(A^{-1})^T$ and $(B^{-1})^T$. \textit{In what order}?\\
+(b) If $U$ is upper triangular then $(U^{-1})^T$ is \underline{\hspace{6mm}} triangular.\\
+\item[2.7.6] The transpose of a block matrix $M = \left[\begin{smallmatrix} \pmb{A}\ \pmb{B} \\ \pmb{C}\ \pmb{D} \end{smallmatrix} \right]$ is $M^T =$ \underline{\hspace{6mm}}. Test an example.\\
+Under what conditions on $A, B, C, D$ is the block matrix symmetric?\\
+\item[2.7.16] If $A = A^{T}$ and $B = B^{T}$, which of these matrices are certainly symmetric?\\
+(a) $A^2 - B^2$ \hspace{10mm} (b) $(A + B)(A - B)$ \hspace{10mm} (c) $ABA$ \hspace{10mm} (d) $ABAB$.\\
+\item[2.7.31] Producing $x_1$ trucks and $x_2$ planes needs $ x_1 + 50x_2$ tons of steel, $40x_1 + 1000x_2$ pounds of rubber, and $2x_1 + 50x_2$ months of labor. If the unit costs $y_1, y_2, y_3$ are \$700 per ton, \$3 per pound, and \$3000 per month, what are the values of one truck and one plane? Those are the components of $A^T\pmb{y}$.\\
+\item[2.7.40] Suppose $Q^T equals \hspace{1mm} Q^{-1}$ (transpose equals inverse, so $Q^TQ = I$).\\
+(a) Show that the columns $q_1, \cdots, q_n$ are unit vectors: $\lVert \pmb{q}_i \rVert^2 = 1$.\\
+(b) Show that every two columns of $Q$ are perpendicular: $\pmb{q}_1^2\pmb{q}_2 = 0$.\\
+(c) Find a 2 by 2 example with first entry $q_{11} = cos\theta$.\\
 \end{enumerate}
 \end{document}
