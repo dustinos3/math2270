@@ -91,8 +91,155 @@ $\pmb{v} = (1, 0, -1)$ and $\pmb{w} = (0, 1, 0)$.\\
 (b) Show that the difference between those two sides equals $(v_{1}w_{2} - v_{2}w_{1})^2$. This cannot be negative\\
 \hspace{5mm} since it is a square - so the inequality is true.\\
 \vspace{3mm}
-
-
+$v_{1}^2w_{1}^2 + 2v_{1}w_{1}v_{2}w_{2} + v_{2}^2w_{2}^2 \leq v_{1}^2w_{1}^2 + v_{1}^2w{2}^2 + v_{2}^2w_{1}^2 + v_{2}^2w_{2}^2$\\
+$2v_{1}w_{1}v_{2}w_{2} \leq v_{1}^2w_{2}^2 + v_{2}^2w_{2}^2$\\
+$v_{1}^2w_{2}^2 + v_{2}^2w_{1}^2 - 2v_{1}w_{1}v_{2}w_{2} \geq 0$\\
+$(v_{1}w_{2} - v_{2}w_{1})^2 \geq 0$\\
+\item[1.2.27] If $\lVert\pmb{v}\rVert = 5$ and $\lVert\pmb{w}\rVert = 3$, what are the smallest and largest values of $\lVert\pmb{v} - \pmb{w}\rVert$? What are the smallest and largest values of $\pmb{v} \pmb{\cdot} \pmb{w}$?\\
+\vspace{3mm}
+$\lVert\pmb{v} - \pmb{w}\rVert$ is between $2$ and $8$.\\
+$\pmb{v}\pmb{\cdot}\pmb{w}$ is between $-15$ and $15$ by the Schwartz inequality.
 \end{enumerate}
-
+\center{\textbf{Chapter 1.3}}
+\begin{enumerate}
+\item[1.3.3]Solve these three equations for $y_{1}, y_{2}, y_{3}$ in terms of $B_{1}, B_{2}, B_{3}$:\\
+\vspace{3mm}
+$
+\hspace{120pt}
+Sy = \pmb{B} \hspace{35pt}
+$$
+\begin{bmatrix}
+1&0&0\\
+1&1&0\\
+1&1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+y_{1}\\
+y_{2}\\
+y_{3}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+B_{1}\\
+B_{2}\\
+B_{3}\\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
+Write the solution $y$ as a matrix $A = S^{-1}$ times the vector $\pmb{B}$. Are the columns of $S$ independent or dependent?\\
+\vspace{3mm}
+$\beta_{1} = y_{1}$\\
+$\beta_{2} = y_{1} + y_{2}$ \hspace{11mm} $y_{2} = \beta_{2} - \beta_{1}$\\
+$\beta_{3} = y_{1} + y_{2} + y_{3}$ \hspace{3mm} $y_{3} = \beta_{3} - \beta_{2}$\\
+There are independent columns in $A$ and $S$.
+\item[1.3.4]Find a combination $x_{1}\pmb{w_{1}} + x_{2}\pmb{w_{2}} + x_{3}\pmb{w_{3}}$ that gives the zero vector:\\
+\vspace{3mm}
+$
+$$
+\hspace{105pt}
+w_{1}=
+\begin{bmatrix}
+1\\
+2\\
+3\\
+\end{bmatrix}
+\hspace{35pt}
+w_{2}=
+\begin{bmatrix}
+4\\
+5\\
+6\\
+\end{bmatrix}
+\hspace{35pt}
+w_{3}=
+\begin{bmatrix}
+7\\
+8\\
+9\\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
+Those vectors are (independent)(dependent). The three vectors lie in a \underline{\hspace{6mm}}. The matrix $W$ with those columns is \textit{not invertible}.\\
+$
+$$
+\hspace{105pt}
+=
+\begin{bmatrix}
+2\\
+4\\
+6\\
+\end{bmatrix}
+\hspace{35pt}
+=
+\begin{bmatrix}
+8\\
+10\\
+12\\
+\end{bmatrix}
+\hspace{35pt}
+=
+\begin{bmatrix}
+-14\\
+-16\\
+-18\\
+\end{bmatrix}
+$$
+$\\
+\hspace{40mm}$x_{1} = 1$ \hspace{10mm} $x_{2} = -2$ \hspace{10mm} $x_{3} = 1$\\
+The vectors are dependent, they lie in a plane.\\
+\item[1.3.8]Moving to a 4 by 4 difference equation $Ax = \pmb{b}$, find the four components $x_{1},x_{2},x_{3},x_{4}$. Then write this solution as $x = S\pmb{b}$ to find the inverse matrix $S = A^{-1}$:\\
+\vspace{3mm}
+$
+$$
+\hspace{115pt}
+Ax=
+\begin{bmatrix}
+1&0&0&0\\
+-1&1&0&0\\
+0&-1&1&0\\
+0&0&-1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_{1}\\
+b_{2}\\
+b_{3}\\
+b_{4}\\
+\end{bmatrix}
+=\pmb{b}
+$$
+$\\
+\vspace{3mm}
+$x_{1} - 0 = b_{1}$ \hspace{7mm} $x_{1} = b_{1}$ \\
+$x_{2} - x_{1} = b_{2}$ \hspace{5mm} $x_{2} = b_{1} + b_{2}$\\
+$x_{3} - x_{2} = b_{3}$ \hspace{5mm} $x_{3} = b_{1} + b_{2} + b_{3}$\\
+$x_{4} - x_{3} = b_{4}$ \hspace{5mm} $x_{4} = b_{1} + b_{2} + b_{3} + b{4}$\\
+$
+$$
+\hspace{115pt}
+=
+\begin{bmatrix}
+1&0&0&0\\
+1&1&0&0\\
+1&1&1&0\\
+1&1&1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+b_{1}\\
+b_{2}\\
+b_{3}\\
+b_{4}\\
+\end{bmatrix}
+= A^{-1}b
+$$
+$\\
+\end{enumerate}
 \end{document}  
