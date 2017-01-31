@@ -1,0 +1,318 @@
+\documentclass[10pt,twoside,reqno]{article}
+\usepackage[marginparsep=1em]{geometry}
+\geometry{lmargin=1.0in,rmargin=1.0in, bmargin=0.75in,  tmargin=0.75in}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amsthm}
+ \usepackage{pgfplots}
+ \usepackage{tikz-3dplot}
+ \usetikzlibrary{shapes.geometric}
+ \usepackage{float}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{chngcntr}
+\usepackage{multicol, comment}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead{\fancyplain{}{}} 
+\fancyhead[RE,RO]{MATH 2270}
+\fancyfoot[RE,LO]{Dr. Heavilin}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+\begin{flushright}
+\begin{minipage}{.25\textwidth}
+Dustin Ginos: \\
+A01233669\\
+Chandler Kinch: \\
+A01662772\\
+Jeff Wasden: \\
+A01657029\\
+
+\today
+\end{minipage}
+\end{flushright}
+
+\center{\textbf{\underline{Homework 2}}}\\
+\vspace{5mm}
+\textbf{Chapter 2.1}
+\begin{enumerate}
+\item[2.1.9]Compute each $Ax$ by dot products of the rows with the column vector: \\
+\vspace{3mm}
+$
+$$
+\hspace{85pt}
+(a) 
+\begin{bmatrix}
+1&2&4\\
+-2&3&1\\
+-4&1&2\\
+\end{bmatrix}
+\begin{bmatrix}
+2\\
+2\\
+3\\
+\end{bmatrix}
+\hspace{45pt}
+(b) 
+\begin{bmatrix}
+2&1&0&0\\
+1&2&1&0\\
+0&1&2&1\\
+0&0&1&2\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+1\\
+1\\
+2\\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.9 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.1.10]Compute each Ax in Problem 9 as a combination of the columns: \\
+\vspace{3mm}
+\hspace{15pt}
+9(a) becomes
+$
+$$
+\hspace{15pt}
+Ax=2
+\begin{bmatrix}
+1\\
+-2\\
+-4\\
+\end{bmatrix}
++2
+\begin{bmatrix}
+2\\
+3\\
+1\\
+\end{bmatrix}
++3
+\begin{bmatrix}
+4\\
+1\\
+2\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+2+4+12\\
+-4+6+3\\
+-8+2+6\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+18\\
+5\\
+0\\
+\end{bmatrix}
+.
+$$
+$
+\\
+\vspace{3mm}
+How many separate multiplications for $Ax$, when the matrix is "3 by 3"?\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.1.12]Multiply $A$ times $x$ to find three components of $Ax$ : \\
+\vspace{3mm}
+\hspace{45pt}
+$
+$$
+\begin{bmatrix}
+2&3\\
+5&1\\
+\end{bmatrix}
+\begin{bmatrix}
+4\\
+2\\
+\end{bmatrix}
+$$
+$
+\hspace{15pt}
+and
+\hspace{15pt}
+$
+$$
+\begin{bmatrix}
+3&6\\
+6&12\\
+\end{bmatrix}
+\begin{bmatrix}
+2\\
+-1\\
+\end{bmatrix}
+$$
+$
+\hspace{15pt}
+and
+\hspace{15pt}
+$
+$$
+\begin{bmatrix}
+1&2&4\\
+2&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+1\\
+1\\
+\end{bmatrix}
+$$
+$
+\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.12 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.1.17]Find the matrix $P$ that multiplies $(x, y, z)$ to give $(y, z, x)$. Find the matrix $Q$ that multiplies $(y, z, x)$ to bring back $(x, y, z)$. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.1.19]What 3 by 3 matrix $E$ multiplies $(x, y, z)$ to give $(x, y, z + x)$? What matrix $E^{-1}$ multiplies $(x, y, z)$ to give $(x, y, z - x)$? If you multiply $(3,4,5)$ by $E$ and then multiply by $E^{-1}$, the two results are $(\underline{\hspace{8mm}})$ and $(\underline{\hspace{8mm}})$. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.1.33]\textbf{Multiplying by $A$ is a "linear transformation"}. Those important words mean: If $w$ is a combination of $u$ and $v$, then $Aw$ is the same combination of $Au$ and $Av$. It is this "\textbf{\textit{linearity}}" $Aw = cAu + dAv$ that gives us the name \textit{linear algebra}. Problem: If 
+$
+$$
+u=
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+$$
+$
+ and 
+$
+$$
+v=
+\begin{bmatrix}
+0\\
+1\\
+\end{bmatrix}
+$$
+$
+ then $Au$ and $Av$ are the columns of $A$. Combine $w = cu + dv$. \textbf{If 
+$
+$$
+\pmb{w=
+\begin{bmatrix}
+5\\
+7\\
+\end{bmatrix}}
+$$
+$
+ how is $\pmb{Aw}$ connected to $\pmb{Au}$ and $\pmb{Av}$?} \\
+\end{enumerate}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+\vspace{5mm}
+\textbf{Chapter 2.2}
+\begin{enumerate}
+\item[2.2.5]Choose a right side which gives no solution and another right side which gives infinitely many solutions. What are two of those solutions? \\
+\vspace{3mm}
+\hspace{100pt}
+\textbf{Singular system}
+\hspace{45pt}
+$3x + 2y = 10$\\
+\hspace{232pt}
+$6x + 4y =$\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.5 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.2.6]Choose $a$ coefficient $b$ that makes this system singular. Then choose a right side $g$ that makes it solvable. Find two solutions in that singular case. \\
+$$2x + by = 16$$ $$4x + 8y = g$$.
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.6 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.2.11](Recommended) A system of linear equations can't have exactly two solutions. \textit{Why}? \\
+\vspace{3mm}
+\hspace{10pt}(a) If $(x, y, z)$ and $(X, Y, Z)$ are two solutions, what is another solution?\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.11 (a) ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{10pt}(b) If 25 planes meet at two points, where else do they meet? 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.11 (b) ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.2.14]Which number $d$ forces a row exchange, and what is the triangular system (not singular) for that $d$? Which $d$ makes this system singular (no third pivot)?
+$$2x + 5y + z = 0$$ $$4x + dy + z = 2$$ $$y -z = 3$$. 
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.14 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.2.18]Construct a 3 by 3 example that has 9 different coefficients on the left side, but rows 2 and 3 become zero in elimination. How many solutions to your system with $\pmb{b} = (1,10,100)$ and how many with $\pmb{b} = (0,0,0)$? 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.2.21]Find the pivots and the solution for both systems ($Ax = b$ and $Kx = b$): \\
+\hspace{122pt}$2x+ y      =0$\hspace{60pt}$2x- y      =0$\\
+\hspace{105pt}$ x+2y+ z   =0$\hspace{35pt}$-x+2y- z   =0$\\
+\hspace{107pt}$    y+2z+ t=0$\hspace{46pt}$    y+2z- t=0$\\
+\hspace{125pt}$       z+2t=5$\hspace{55pt}$     - z+2t=5$.\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.2.25]For which three numbers $a$ will elimination fail to give three pivots? \\
+\vspace{3mm}
+\hspace{95pt}
+$
+$$
+A=
+\begin{bmatrix}
+a&2&3\\
+a&a&4\\
+a&a&a\\
+\end{bmatrix}
+$$
+$
+is singular for three values of $a$.
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.25 ~~~~~~~~~~~~~~~~~~~~~~~~
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 2.3}
+\begin{enumerate}
+\item[2.3.3]
+\item[2.3.7]
+\item[2.3.10]
+\item[2.3.17]
+\item[2.3.18]
+\item[2.3.19]
+\item[2.3.21]
+\item[2.3.24]
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 2.4}
+\begin{enumerate}
+\item[2.4.5]
+\item[2.4.6]
+\item[2.4.13]
+\item[2.4.14]
+\item[2.4.22]
+\item[2.4.23]
+\item[2.4.29]
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 2.5}
+\begin{enumerate}
+\item[2.5.7]
+\item[2.5.13]
+\item[2.5.29]
+\item[2.5.30]
+\item[2.5.31]
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 2.6}
+\begin{enumerate}
+\item[2.6.7]
+\item[2.6.8]
+\item[2.6.13]
+\item[2.6.16]
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 2.7}
+\begin{enumerate}
+\item[2.7.3]
+\item[2.7.6]
+\item[2.7.16]
+\item[2.7.31]
+\item[2.7.40]
+\end{enumerate}
+\end{document}
