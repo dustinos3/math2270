@@ -269,25 +269,216 @@ is singular for three values of $a$.
 \vspace{5mm}
 \textbf{Chapter 2.3}
 \begin{enumerate}
-\item[2.3.3]
-\item[2.3.7]
-\item[2.3.10]
-\item[2.3.17]
-\item[2.3.18]
-\item[2.3.19]
-\item[2.3.21]
-\item[2.3.24]
+\item[2.3.3]Which three matrices $E_{21} , E_{31} , E_{32}$ put $A$ into triangular form $U$? \\
+\vspace{3mm}
+\hspace{100pt}
+$
+$$
+A=
+\begin{bmatrix}
+1&1&0\\
+4&6&1\\
+-2&2&0\\
+\end{bmatrix}
+$$
+$
+\hspace{10pt}
+and
+\hspace{10pt}
+$E_{32}E_{31}E_{21}A=u$.\\
+\vspace{3mm}
+Multiply those $E$'s to get one matrix $M$ that does elimination: $MA=U$. 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.3 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.7]Suppose $E$ subtracts 7 times row 1 from row 3.\\
+\hspace{25pt}(a) To \textit{invert} that step you should $\underline{\hspace{8mm}}$ 7 times row $\underline{\hspace{8mm}}$ to row $\underline{\hspace{8mm}}$ \\
+\hspace{25pt}(b) What "inverse matrix" $E^{-1}$ takes that reverse step (so $E^{-1}E = I$)? \\
+\hspace{25pt}(c) If the reverse step is applied first (and then $E$) show that $E E^{-1} = I$. 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.7 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.10](a) What 3 by 3 matrix $E_{13}$ will add row 3 to row 1? \\
+(b) What matrix adds row 1 to row 3 and at the same time row 3 to row 1? \\
+(c) What matrix adds row 1 to row 3 and then adds row 3 to row 1?
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.17]The parabola $y = a + bx + cx^2$ goes through the points $(x, y) = (1,4)$ and $(2,8)$ and $(3, 14)$. Find and solve a matrix equation for the unknowns $(a, b, c)$. 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.18]Multiply these matrices in the orders $EF$ and $FE$: \\
+\vspace{3mm}
+\hspace{105pt}
+$
+$$
+E=
+\begin{bmatrix}
+1&0&0\\
+a&1&0\\
+b&0&1\\
+\end{bmatrix}
+\hspace{35pt}
+F=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&c&1\\
+\end{bmatrix}
+$$
+$
+\vspace{3mm}\\
+Also compute $E^2 = EE$ and $F^3 = FFF$. You can guess $F^{100}$. 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.19]Multiply these row exchange matrices in the orders $PQ$ and $QP$ and $P^2$ : \\
+\vspace{3mm}
+\hspace{105pt}
+$
+$$
+P=
+\begin{bmatrix}
+0&1&0\\
+1&0&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{10pt}
+$$
+$
+and
+$
+$$
+\hspace{10pt}
+Q=
+\begin{bmatrix}
+0&0&1\\
+0&1&0\\
+1&0&0\\
+\end{bmatrix}
+$$
+$
+\vspace{3mm}\\
+Find another non-diagonal matrix whose square is $M^2 = I$.
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.21]If $E$ adds row 1 to row 2 and $F$ adds row 2 to row 1, does $EF$ equal $FE$? \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.3.24]Apply elimination to the 2 by 3 augmented matrix $[A\hspace{8pt}b\hspace{1pt}]$. What is the triangular system $U x = c$? What is the solution $x$? \\
+\vspace{3mm}
+$
+$$
+\hspace{145pt}
+Ax=
+\begin{bmatrix}
+2&3\\
+4&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x_{1}\\
+x_{2}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+17\\
+\end{bmatrix}
+$$
+$
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.24 ~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.4}
 \begin{enumerate}
-\item[2.4.5]
-\item[2.4.6]
-\item[2.4.13]
-\item[2.4.14]
-\item[2.4.22]
-\item[2.4.23]
-\item[2.4.29]
+\item[2.4.5]Compute $A^2$ and $A^3$. Make a prediction for $A^5$ and $A^n$: \\
+\vspace{3mm}
+\hspace{130pt}
+$
+$$
+A=
+\begin{bmatrix}
+1&b \\
+0&1 \\
+\end{bmatrix}
+\hspace{10pt}
+$$
+$
+and
+$
+$$
+\hspace{10pt}
+A=
+\begin{bmatrix}
+2&2 \\
+0&0 \\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.5 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.6]Show that $(A + B)^2$ is different from $A^2 + 2AB + B^2$, when \\
+\vspace{3mm}
+\hspace{130pt}
+$
+$$
+A=
+\begin{bmatrix}
+1&2 \\
+0&0 \\
+\end{bmatrix}
+\hspace{10pt}
+$$
+$
+and
+$
+$$
+\hspace{10pt}
+A=
+\begin{bmatrix}
+1&0 \\
+3&0 \\
+\end{bmatrix}
+$$
+$.\\
+\vspace{3mm} 
+Write down the correct rule for $(A + B)(A + B) = A^2 + \underline{\hspace{8mm}} + B^2$.
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.6 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.13]Which of the following matrices are guaranteed to equal $(A - B)^2$:\hspace{15pt}$A^2 - B^2, (B - A)^2, A^2 - 2AB + B^2, A(A - B) - B(A - B), A^2 - AB - BA + B^2$? 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.13 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.14]True or false: \\
+\hspace{15pt}(a) If $A^2$ is defined then $A$ is necessarily square. \\
+\hspace{15pt}(b) If $AB$ and $BA$ are defined then $A$ and $B$ are square. \\
+\hspace{15pt}(c) If $AB$ and $BA$ are defined then $AB$ and $BA$ are square. \\
+\hspace{15pt}(d) If $A B = B$ then $A = I$. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.14 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.22]By trial and error find real nonzero 2 by 2 matrices such that \\
+\vspace{3mm}
+\hspace{35pt}
+$ A^2=-I \hspace{20pt} BC=0 \hspace{20pt} DE = -ED$ (not allowing $DE = 0$). 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.22 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.23]\hspace{10pt}(a) Find a nonzero matrix $A$ for which $A^2=0$. \\
+\hspace{10pt}(b) Find a matrix that has $A^2 \neq 0$ but $A^3 = 0$. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.23 ~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.29]Which matrices $E_{21}$ and $E_{31}$ produce zeros in the $(2, 1)$ and $(3, 1)$ positions of $E_{21} A$ and $E_{31}A$? \\
+\vspace{3mm}
+\hspace{162pt}
+$
+$$
+A=
+\begin{bmatrix}
+2&1&0 \\
+-2&0&1 \\
+8&5&2 \\
+\end{bmatrix}
+$$
+$. \\
+\vspace{3mm}
+Find the single matrix $E = E_{31} E_{21}$ that produces both zeros at once. Multiply $EA$. 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.29 ~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.5}
