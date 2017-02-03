@@ -79,6 +79,7 @@ $$
 $\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.9 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 $
 $$
 \hspace{85pt}
@@ -100,7 +101,6 @@ $$
 0\\
 \end{bmatrix}
 \hspace{45pt}
-(b) 
 \begin{bmatrix}
 2&1&0&0\\
 1&2&1&0\\
@@ -122,7 +122,6 @@ $$
 \end{bmatrix}
 $$
 $\\
-a) 
 \item[2.1.10]Compute each Ax in Problem 9 as a combination of the columns: \\
 \vspace{3mm}
 \hspace{15pt}
@@ -170,59 +169,192 @@ How many separate multiplications for $Ax$, when the matrix is "3 by 3"?\\
 9 seperate multiplications
 \item[2.1.12]Multiply $A$ times $x$ to find three components of $Ax$ : \\
 \vspace{3mm}
-\hspace{45pt}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.12 ~~~~~~~~~~~~~~~~~~~~~~~~
 $
 $$
 \begin{bmatrix}
-2&3\\
-5&1\\
+0&0&1\\
+0&1&0\\
+1&0&0\\
 \end{bmatrix}
 \begin{bmatrix}
-4\\
-2\\
+x\\
+y\\
+z\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+z\\
+y\\
+x\\
 \end{bmatrix}
 $$
 $
 \hspace{15pt}
-and
-\hspace{15pt}
 $
 $$
 \begin{bmatrix}
-3&6\\
-6&12\\
+2&1&3\\
+1&2&3\\
+3&3&6\\
 \end{bmatrix}
 \begin{bmatrix}
-2\\
+1\\
+1\\
 -1\\
 \end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0\\
+0\\
+\end{bmatrix}
 $$
 $
-\hspace{15pt}
-and
 \hspace{15pt}
 $
 $$
 \begin{bmatrix}
-1&2&4\\
-2&0&1\\
+2&1&3\\
+1&2&3\\
+3&3&6\\
 \end{bmatrix}
 \begin{bmatrix}
-3\\
 1\\
 1\\
+-1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0\\
+0\\
 \end{bmatrix}
 $$
 $
 \\
 \vspace{3mm}
-%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.12 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 \item[2.1.17]Find the matrix $P$ that multiplies $(x, y, z)$ to give $(y, z, x)$. Find the matrix $Q$ that multiplies $(y, z, x)$ to bring back $(x, y, z)$. \\
 \vspace{3mm}
+$
+$$
+\begin{bmatrix}
+0&1&0\\
+0&0&1\\
+1&0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+z\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+y\\
+z\\
+x\\
+\end{bmatrix}
+$$
+$
+\hspace{15pt}
+$
+$$
+\begin{bmatrix}
+0&0&1\\
+1&0&0\\
+0&1&0\\
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+z\\
+x\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x\\
+y\\
+z\\
+\end{bmatrix}
+$$
+$
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.17 ~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.1.19]What 3 by 3 matrix $E$ multiplies $(x, y, z)$ to give $(x, y, z + x)$? What matrix $E^{-1}$ multiplies $(x, y, z)$ to give $(x, y, z - x)$? If you multiply $(3,4,5)$ by $E$ and then multiply by $E^{-1}$, the two results are $(\underline{\hspace{8mm}})$ and $(\underline{\hspace{8mm}})$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+$
+$$
+E \rightarrow
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+1&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+z\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x\\
+y\\
+z+x\\
+\end{bmatrix}
+$$
+$
+\hspace{15pt}
+$
+$$
+E^{-1} \rightarrow
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+-1&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+z\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+x\\
+y\\
+z-x\\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
+$
+$$
+E
+\begin{bmatrix}
+3\\
+4\\
+5\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+3\\
+4\\
+8\\
+\end{bmatrix}
+\hspace{15pt}
+E^{-1}
+\begin{bmatrix}
+3\\
+4\\
+8\\
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+4\\
+5\\
+\end{bmatrix}
+$$
+$
 \item[2.1.33]\textbf{Multiplying by $A$ is a "linear transformation"}. Those important words mean: If $w$ is a combination of $u$ and $v$, then $Aw$ is the same combination of $Au$ and $Av$. It is this "\textbf{\textit{linearity}}" $Aw = cAu + dAv$ that gives us the name \textit{linear algebra}. Problem: If 
 $
 $$
@@ -256,7 +388,11 @@ $
  how is $\pmb{Aw}$ connected to $\pmb{Au}$ and $\pmb{Av}$?} \\
 \end{enumerate}
 \vspace{3mm}
-%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+$w = cu + dv \rightarrow \left[\begin{smallmatrix} 5\\ 7 \end{smallmatrix} \right] = c\left[\begin{smallmatrix} 1\\0 \end{smallmatrix}\right] + d\left[\begin{smallmatrix} 0\\1 \end{smallmatrix}\right] $\\
+Upon inspection $c = 5$, $d = 7$\\
+$Aw = cAu + dAv$ then becomes $Aw = 5Au + 7Av$\\
+
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.1.33 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{5mm}
 \textbf{Chapter 2.2}
 \begin{enumerate}
@@ -270,23 +406,48 @@ $3x + 2y = 10$\\
 $6x + 4y =$\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.5 ~~~~~~~~~~~~~~~~~~~~~~~~
+A right hand side of $20$ would yield infinitely many solutions, any other right hand side would result in no solution. Since the equations are parallel.\\
 \item[2.2.6]Choose $a$ coefficient $b$ that makes this system singular. Then choose a right side $g$ that makes it solvable. Find two solutions in that singular case. \\
-$$2x + by = 16$$ $$4x + 8y = g$$.
+$$2x + by = 16$$ $$4x + 8y = g$$\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.6 ~~~~~~~~~~~~~~~~~~~~~~~~
+If $b = 4$, then the system is singular becuase the equations are parallel. Then $g = 32$ and there are infinitely many solutions such as (0, 4) and (6, 1).\\
+
 \item[2.2.11](Recommended) A system of linear equations can't have exactly two solutions. \textit{Why}? \\
 \vspace{3mm}
 \hspace{10pt}(a) If $(x, y, z)$ and $(X, Y, Z)$ are two solutions, what is another solution?\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.11 (a) ~~~~~~~~~~~~~~~~~~~~~~~~
-\hspace{10pt}(b) If 25 planes meet at two points, where else do they meet? 
+$(\frac{1}{2}x, \frac{1}{2}y, \frac{1}{2}z)$ There are infinitely many solutions along $(x, y, z)$.\\ 
+\vspace{3mm}
+\hspace{10pt}(b) If 25 planes meet at two points, where else do they meet? \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.11 (b) ~~~~~~~~~~~~~~~~~~~~~~~~
+Along an entire line through those points.
 \item[2.2.14]Which number $d$ forces a row exchange, and what is the triangular system (not singular) for that $d$? Which $d$ makes this system singular (no third pivot)?
-$$2x + 5y + z = 0$$ $$4x + dy + z = 2$$ $$y -z = 3$$. 
+$$2x + 5y + z = 0$$ $$4x + dy + z = 2$$ $$y -z = 3$$
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.14 ~~~~~~~~~~~~~~~~~~~~~~~~
-\item[2.2.18]Construct a 3 by 3 example that has 9 different coefficients on the left side, but rows 2 and 3 become zero in elimination. How many solutions to your system with $\pmb{b} = (1,10,100)$ and how many with $\pmb{b} = (0,0,0)$? 
+If $d = 10$ a row exchange is forced since the first multiplier is 2 and $10 - (2)5 = 0$\\
+If $d = 10$ the system becomes:\\
+$2x + 5y + z = 0$\\
+\hspace{38pt}$-z = 2$\\
+\hspace{28pt}$y-z = 3$\\
+If $d = 11$ the system is singular.\\
+
+\item[2.2.18]Construct a 3 by 3 example that has 9 different coefficients on the left side, but rows 2 and 3 become zero in elimination. How many solutions to your system with $\pmb{b} = (1,10,100)$ and how many with $\pmb{b} = (0,0,0)$? \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+A=
+\begin{bmatrix}
+2&3&4\\
+6&9&12\\
+10&15&20\\
+\end{bmatrix}
+$$
+$\\
+If $Ax = b$ and $b=(1, 10, 100)$ there are no solutions.\\
+If $b = (0, 0, 0)$ there are infinitely many.\\
 \item[2.2.21]Find the pivots and the solution for both systems ($Ax = b$ and $Kx = b$): \\
 \hspace{122pt}$2x+ y      =0$\hspace{60pt}$2x- y      =0$\\
 \hspace{105pt}$ x+2y+ z   =0$\hspace{35pt}$-x+2y- z   =0$\\
@@ -294,6 +455,19 @@ $$2x + 5y + z = 0$$ $$4x + dy + z = 2$$ $$y -z = 3$$.
 \hspace{125pt}$       z+2t=5$\hspace{55pt}$     - z+2t=5$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+For $Ax = b$, the pivots are $2, \frac{3}{2}, \frac{4}{4}$ and\\
+\vspace{3mm}
+\hspace{15pt}$2x+ y      =0$\hspace{35pt}$2x + y      =0$ \hspace{35pt}$2x+ y      =0$\hspace{35pt}$2x + y      =0$\\
+\hspace{15pt}$ x+2y+ z   =0$\hspace{18pt}$\frac{3}{2}y + z   =0$ \hspace{35pt}$ \frac{3}{2}y + z   =0$\hspace{30pt}$\frac{3}{2}y + z   =0$\\
+\hspace{15pt}$    y+2z+ t=0$\hspace{18pt}$    y+2z+t=0$ \hspace{22pt}$    \frac{4}{3}z+ t=0$\hspace{35pt}$    \frac{4}{3}z+t=0$\\
+\hspace{15pt}$       z+2t=5$\hspace{35pt}$     z+2t=5$ \hspace{40pt}$       z+2t=5$\hspace{40pt}$     \frac{5}{4}t=5$\\
+\vspace{3mm} Through back subsititution $t = 4, z = -3, y =2, x = -1$.\\  
+\vspace{3mm}
+\hspace{15pt}$2x- y      =0$\hspace{35pt}$2x - y      =0$ \hspace{55pt}$2x- y      =0$\hspace{35pt}$2x - y      =0$\\
+\hspace{15pt}$ -x+2y- z   =0$\hspace{18pt}$\frac{3}{2}y - z   =0$ \hspace{45pt}$ \frac{3}{2}y- z   =0$\hspace{30pt}$\frac{3}{2}y - z   =0$\\
+\hspace{15pt}$    -y+2z- t=0$\hspace{18pt}$    -y+2z-t=0$ \hspace{25pt}$    \frac{4}{3}z- t=0$\hspace{35pt}$    \frac{4}{3}z-t=0$\\
+\hspace{15pt}$       -z+2t=5$\hspace{35pt}$     -z+2t=5$ \hspace{40pt}$       -z+2t=5$\hspace{40pt}$     \frac{5}{4}t=5$\\
+\vspace{3mm} Through back subsititution $t = 4, z = 3, y =2, x = 1$.\\  
 \item[2.2.25]For which three numbers $a$ will elimination fail to give three pivots? \\
 \vspace{3mm}
 \hspace{95pt}
@@ -307,9 +481,10 @@ a&a&a\\
 \end{bmatrix}
 $$
 $
-is singular for three values of $a$.
+is singular for three values of $a$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.2.25 ~~~~~~~~~~~~~~~~~~~~~~~~
+Elimination fails to give three pivots when $a = 2, 3, 0$.\\
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.3}
@@ -332,18 +507,127 @@ and
 \hspace{10pt}
 $E_{32}E_{31}E_{21}A=u$.\\
 \vspace{3mm}
-Multiply those $E$'s to get one matrix $M$ that does elimination: $MA=U$. 
+Multiply those $E$'s to get one matrix $M$ that does elimination: $MA=U$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.3 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+E_{21}=
+\begin{bmatrix}
+1&0&0\\
+-4&1&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{31}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+2&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{32}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&-2&1\\
+\end{bmatrix}
+\hspace{15pt}
+M=
+\begin{bmatrix}
+1&0&0\\
+-4&1&0\\
+10&-2&1\\
+\end{bmatrix}
+$$
+$
 \item[2.3.7]Suppose $E$ subtracts 7 times row 1 from row 3.\\
 \hspace{25pt}(a) To \textit{invert} that step you should $\underline{\hspace{8mm}}$ 7 times row $\underline{\hspace{8mm}}$ to row $\underline{\hspace{8mm}}$ \\
+\vspace{2mm}
+ To invert that step you should add 7 times row 1 to row 3.\\
+ \vspace{2mm}
 \hspace{25pt}(b) What "inverse matrix" $E^{-1}$ takes that reverse step (so $E^{-1}E = I$)? \\
-\hspace{25pt}(c) If the reverse step is applied first (and then $E$) show that $E E^{-1} = I$. 
+\vspace{2mm}
+$
+$$
+E^{-1}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+7&0&1\\
+\end{bmatrix}
+$$
+$\\
+\vspace{2mm}
+\hspace{25pt}(c) If the reverse step is applied first (and then $E$) show that $E E^{-1} = I$. \\
+\vspace{2mm}
+$
+$$
+E^{-1}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+-7&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+EE^{-1}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+-7&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+7&0&1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1\\
+\end{bmatrix}
+$$
+$\\
+\vspace{2mm}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.7 ~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.3.10](a) What 3 by 3 matrix $E_{13}$ will add row 3 to row 1? \\
+\vspace{2mm}
+$
+$$
+E_{13}=
+\begin{bmatrix}
+1&0&1\\
+0&1&0\\
+0&0&1\\
+\end{bmatrix}
+$$
+$\\
+\vspace{2mm}
 (b) What matrix adds row 1 to row 3 and at the same time row 3 to row 1? \\
-(c) What matrix adds row 1 to row 3 and then adds row 3 to row 1?
+\vspace{2mm}
+$
+$$
+\begin{bmatrix}
+1&0&1\\
+0&1&0\\
+1&0&1\\
+\end{bmatrix}
+$$
+$\\
+\vspace{2mm}
+(c) What matrix adds row 1 to row 3 and then adds row 3 to row 1?\\
+\vspace{2mm}
+$
+$$
+\begin{bmatrix}
+2&0&1\\
+0&1&0\\
+1&0&1\\
+\end{bmatrix}
+$$
+$\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.10 ~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.3.17]The parabola $y = a + bx + cx^2$ goes through the points $(x, y) = (1,4)$ and $(2,8)$ and $(3, 14)$. Find and solve a matrix equation for the unknowns $(a, b, c)$. 
