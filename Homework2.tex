@@ -8,10 +8,10 @@
 \usepackage{tikz}
 \usepackage{enumerate}
 \usepackage{amsthm}
- \usepackage{pgfplots}
- \usepackage{tikz-3dplot}
- \usetikzlibrary{shapes.geometric}
- \usepackage{float}
+\usepackage{pgfplots}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{shapes.geometric}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{lmodern}
@@ -1575,19 +1575,172 @@ $$
 $
 \end{center}
 \end{enumerate}
+\vspace{3mm}
+$
+$$
+\begin{bmatrix}
+1&0&0\\
+1&1&0\\
+1&1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+1&1&1\\
+0&1&1\\
+0&0&1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1&1&1\\
+1&2&2\\
+1&2&3\\
+\end{bmatrix}
+=A
+$$
+$\\
+\vspace{3mm}
+$
+$$
+\begin{bmatrix}
+1&0&0\\
+1&1&0\\
+1&1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+c_1\\
+c_2\\
+c_3\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+5\\
+6\\
+\end{bmatrix}
+$$
+$
+Using back substitution: $c_1 = 4, c_2 = 1, c_3 = 1$\\
+\vspace{3mm}
+$
+$$
+\begin{bmatrix}
+1&1&1\\
+0&1&1\\
+0&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+1\\
+1\\
+\end{bmatrix}
+$$
+$
+Using back substitution: $x_3 = 1, x_2 = 0, x_1 = 3$\\
 \vspace{5mm}
 \textbf{Chapter 2.7}
 \begin{enumerate}
 \item[2.7.3] (a) The matrix $((AB)^{-1})^T$ comes from $(A^{-1})^T$ and $(B^{-1})^T$. \textit{In what order}?\\
+\vspace{3mm}
+$(A^{-1})^T(B^{-1})$\\
+\vspace{3mm}
 (b) If $U$ is upper triangular then $(U^{-1})^T$ is \underline{\hspace{6mm}} triangular.\\
+\vspace{3mm}
+lower\\
+\vspace{3mm}
 \item[2.7.6] The transpose of a block matrix $M = \left[\begin{smallmatrix} \pmb{A}\ \pmb{B} \\ \pmb{C}\ \pmb{D} \end{smallmatrix} \right]$ is $M^T =$ \underline{\hspace{6mm}}. Test an example.\\
 Under what conditions on $A, B, C, D$ is the block matrix symmetric?\\
+\vspace{3mm}
+$
+$$
+M^T =
+\begin{bmatrix}
+A^T & C^T\\
+B^T & D^T\\
+\end{bmatrix}
+$$
+$\\
+The block matrix is symmetric when $A^T = A, B^T = C$ and $D^T = D$\\
 \item[2.7.16] If $A = A^{T}$ and $B = B^{T}$, which of these matrices are certainly symmetric?\\
 (a) $A^2 - B^2$ \hspace{10mm} (b) $(A + B)(A - B)$ \hspace{10mm} (c) $ABA$ \hspace{10mm} (d) $ABAB$.\\
+\vspace{3mm}
+$A^2 - B^2$ is symmetric, along with $ABA$ and $ABAB$. $(A + B)(A - B)$ is not symmetric.\\
 \item[2.7.31] Producing $x_1$ trucks and $x_2$ planes needs $ x_1 + 50x_2$ tons of steel, $40x_1 + 1000x_2$ pounds of rubber, and $2x_1 + 50x_2$ months of labor. If the unit costs $y_1, y_2, y_3$ are \$700 per ton, \$3 per pound, and \$3000 per month, what are the values of one truck and one plane? Those are the components of $A^T\pmb{y}$.\\
+\vspace{3mm}
+$
+$$
+Ax =
+\begin{bmatrix}
+1 & 50\\
+40 & 1000\\
+2 & 50\\
+\end{bmatrix}
+\begin{bmatrix}
+y_1\\
+y_2\\
+\end{bmatrix}
+\hspace{5pt}
+A^Ty =
+\begin{bmatrix}
+1 & 40 & 2\\
+50 & 1000 & 50\\
+\end{bmatrix}
+\begin{bmatrix}
+700\\
+3\\
+3000\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+6820\\
+188000\\
+\end{bmatrix}
+$$
+$
+1 truck = 6820, 1 plane = 188000\\
 \item[2.7.40] Suppose $Q^T equals \hspace{1mm} Q^{-1}$ (transpose equals inverse, so $Q^TQ = I$).\\
+\vspace{3mm}
+$
+$$
+Q^TQ = I \rightarrow
+\begin{bmatrix}
+q_1 & q_3\\
+q_2 & q_4\\
+\end{bmatrix}
+\begin{bmatrix}
+q_1 & q_2\\
+q_3 & q_4\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0\\
+0 & 1\\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
 (a) Show that the columns $q_1, \cdots, q_n$ are unit vectors: $\lVert \pmb{q}_i \rVert^2 = 1$.\\
+\vspace{3mm}
+From the above equation $q_1^2 + q_3^2 = 1, q_2^2 + q_4^2 = 1$ so,  $\left[\begin{smallmatrix} q_1\\ q_3 \end{smallmatrix} \right]$ and  $\left[\begin{smallmatrix} q_2\\ q_4 \end{smallmatrix} \right]$ are unit vectors.\\
+\vspace{3mm}
 (b) Show that every two columns of $Q$ are perpendicular: $\pmb{q}_1^2\pmb{q}_2 = 0$.\\
+\vspace{3mm}
+From the above equation $q_1^Tq_2 + q_3^Tq_4 = 0,  q_3^Tq_1 + q_4^Tq_2 = 0$ so,  $\left[\begin{smallmatrix} q_1\\ q_3 \end{smallmatrix} \right]$ and  $\left[\begin{smallmatrix} q_2\\ q_4 \end{smallmatrix} \right]$ are perpendicular.\\
+\vspace{3mm}
 (c) Find a 2 by 2 example with first entry $q_{11} = cos\theta$.\\
+\vspace{3mm}
+$
+$$
+\begin{bmatrix}
+cos\theta & -sin\theta\\
+sin\theta & cos \theta\\
+\end{bmatrix}
+$$
+$
+\vspace{3mm}
 \end{enumerate}
 \end{document}
