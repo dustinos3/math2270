@@ -630,9 +630,82 @@ $$
 $\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.10 ~~~~~~~~~~~~~~~~~~~~~~~~
-\item[2.3.17]The parabola $y = a + bx + cx^2$ goes through the points $(x, y) = (1,4)$ and $(2,8)$ and $(3, 14)$. Find and solve a matrix equation for the unknowns $(a, b, c)$. 
+\item[2.3.17]The parabola $y = a + bx + cx^2$ goes through the points $(x, y) = (1,4)$ and $(2,8)$ and $(3, 14)$. Find and solve a matrix equation for the unknowns $(a, b, c)$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+With the given parabola and points we can create a matrix equation and then use elimination to solve the system : \\
+$
+$$
+\hspace{20pt}
+\begin{bmatrix}
+1&1&1\\
+1&2&4\\
+1&3&9\\
+\end{bmatrix}
+\begin{bmatrix}
+a\\
+b\\
+c\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+8\\
+14\\
+\end{bmatrix}
+\hspace{15pt}
+$$
+$
+Subtract row 1 from rows 2 \& 3.
+$
+$$
+\hspace{15pt}
+\begin{bmatrix}
+1&1&1\\
+0&1&3\\
+0&2&8\\
+\end{bmatrix}
+\begin{bmatrix}
+a\\
+b\\
+c\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+4\\
+10\\
+\end{bmatrix}
+$$
+$\\
+\vspace{3mm}
+\hspace{20pt}
+Then subtract 2 times row 2 from 3.
+$
+$$
+\hspace{15pt}
+\begin{bmatrix}
+1&1&1\\
+0&1&3\\
+0&0&2\\
+\end{bmatrix}
+\begin{bmatrix}
+a\\
+b\\
+c\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+4\\
+2\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{3mm}
+\hspace{20pt}
+Through back substitution $c=1,b=1,$ and $a=2$.
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.3.18]Multiply these matrices in the orders $EF$ and $FE$: \\
 \vspace{3mm}
 \hspace{105pt}
@@ -654,9 +727,62 @@ F=
 $$
 $
 \vspace{3mm}\\
-Also compute $E^2 = EE$ and $F^3 = FFF$. You can guess $F^{100}$. 
+Also compute $E^2 = EE$ and $F^3 = FFF$. You can guess $F^{100}$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+\hspace{25pt}
+EF=
+\begin{bmatrix}
+1&0&0\\
+a&1&0\\
+b&c&1\\
+\end{bmatrix}
+\hspace{15pt}
+FE=
+\begin{bmatrix}
+1&0&0\\
+a&1&0\\
+ac+b&c&1\\
+\end{bmatrix}
+\hspace{15pt}
+E^2=
+\begin{bmatrix}
+1&0&0\\
+2a&1&0\\
+2b&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+F^2=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&2c&1\\
+\end{bmatrix} 
+$$
+$\\
+$
+$$
+\vspace{3mm}
+\hspace{90pt}
+F^3=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&3c&1\\
+\end{bmatrix}
+\hspace{40pt}
+F^{100}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&100c&1\\
+\end{bmatrix}
+$$
+$
+\\
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.3.19]Multiply these row exchange matrices in the orders $PQ$ and $QP$ and $P^2$ : \\
 \vspace{3mm}
 \hspace{105pt}
@@ -684,12 +810,67 @@ Q=
 $$
 $
 \vspace{3mm}\\
-Find another non-diagonal matrix whose square is $M^2 = I$.
+Find another non-diagonal matrix whose square is $M^2 = I$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+\hspace{35pt}
+PQ=
+\begin{bmatrix}
+0&1&0\\
+0&0&1\\
+1&0&0\\
+\end{bmatrix}
+\hspace{15pt}
+QP=
+\begin{bmatrix}
+0&0&1\\
+1&0&0\\
+0&1&0\\
+\end{bmatrix}
+\hspace{15pt}
+P^2=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+M=
+\begin{bmatrix}
+1&0&0\\
+0&0&1\\
+0&1&0\\
+\end{bmatrix}
+$$
+$
+\\
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.3.21]If $E$ adds row 1 to row 2 and $F$ adds row 2 to row 1, does $EF$ equal $FE$? \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+\vspace{3mm}
+\hspace{90pt}
+EF=
+\begin{bmatrix}
+1&1&0\\
+1&2&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{40pt}
+FE=
+\begin{bmatrix}
+2&1&0\\
+1&1&0\\
+0&0&1\\
+\end{bmatrix}
+$$
+$
+\\
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.3.24]Apply elimination to the 2 by 3 augmented matrix $[A\hspace{8pt}b\hspace{1pt}]$. What is the triangular system $U x = c$? What is the solution $x$? \\
 \vspace{3mm}
 $
@@ -710,9 +891,41 @@ x_{2}\\
 17\\
 \end{bmatrix}
 $$
-$
+$ \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.3.24 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+\hspace{95pt}
+\begin{bmatrix}
+2&3&&1\\
+4&1&&17\\
+\end{bmatrix}
+\hspace{15pt}
+\rightarrow
+\hspace{15pt}
+\begin{bmatrix}
+2&3&&1\\
+0&-5&&15\\
+\end{bmatrix}
+\hspace{25pt}
+2x_1+3x_2=1
+$$
+$ \\
+\hspace{313pt}
+$-5x_2=15$
+\\
+\hspace{185pt}
+x=
+$
+$$
+\begin{bmatrix}
+5\\
+-3\\
+\end{bmatrix}
+$$
+$
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.4}
@@ -743,6 +956,65 @@ $$
 $\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.5 ~~~~~~~~~~~~~~~~~~~~~~~~
+$
+$$
+\hspace{60pt}
+A^2=
+\begin{bmatrix}
+1&2b \\
+0&1 \\
+\end{bmatrix}
+\hspace{15pt}
+A^3=
+\begin{bmatrix}
+1&3b \\
+0&1 \\
+\end{bmatrix}
+\hspace{15pt}
+A^5=
+\begin{bmatrix}
+1&5b \\
+0&1 \\
+\end{bmatrix}
+\hspace{15pt}
+A^n=
+\begin{bmatrix}
+1&nb \\
+0&1 \\
+\end{bmatrix}
+$$
+$
+\\
+$
+$$
+\hspace{50pt}
+A^2=
+\begin{bmatrix}
+2^2&2^2 \\
+0&0 \\
+\end{bmatrix}
+\hspace{15pt}
+A^3=
+\begin{bmatrix}
+2^3&2^3 \\
+0&0 \\
+\end{bmatrix}
+\hspace{15pt}
+A^5=
+\begin{bmatrix}
+2^5&2^5 \\
+0&0 \\
+\end{bmatrix}
+\hspace{15pt}
+A^n=
+\begin{bmatrix}
+2^n&2^n \\
+0&0 \\
+\end{bmatrix}
+$$
+$
+\\
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.4.6]Show that $(A + B)^2$ is different from $A^2 + 2AB + B^2$, when \\
 \vspace{3mm}
 \hspace{130pt}
@@ -760,7 +1032,7 @@ and
 $
 $$
 \hspace{10pt}
-A=
+B=
 \begin{bmatrix}
 1&0 \\
 3&0 \\
@@ -768,12 +1040,35 @@ A=
 $$
 $.\\
 \vspace{3mm} 
-Write down the correct rule for $(A + B)(A + B) = A^2 + \underline{\hspace{8mm}} + B^2$.
+Write down the correct rule for $(A + B)(A + B) = A^2 + \underline{\hspace{8mm}} + B^2$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.6 ~~~~~~~~~~~~~~~~~~~~~~~~
-\item[2.4.13]Which of the following matrices are guaranteed to equal $(A - B)^2$:\hspace{15pt}$A^2 - B^2, (B - A)^2, A^2 - 2AB + B^2, A(A - B) - B(A - B), A^2 - AB - BA + B^2$? 
+\hspace{25pt}
+$(A+B)(A+B)=AA+\underline{AB+BA}+BB $
+\hspace{20pt}
+$
+$$
+AB=
+\begin{bmatrix}
+7&0 \\
+0&0 \\
+\end{bmatrix}
+\hspace{20pt}
+BA=
+\begin{bmatrix}
+1&2 \\
+3&6 \\
+\end{bmatrix}
+$$
+$ \\
+\hspace{25pt}
+$AB \neq BA$ therefore $AB+BA$ cannot be combined into $2AB$. \\
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[2.4.13]Which of the following matrices are guaranteed to equal $(A - B)^2$:\hspace{15pt}$A^2 - B^2, (B - A)^2, A^2 - 2AB + B^2, A(A - B) - B(A - B), A^2 - AB - BA + B^2$? \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.13 ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{30pt}$(A-B)^2=(A-B)(A-B)=\underline{A(A-B)-B(A-B)}=\underline{A^2-AB-BA+B^2}$
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.4.14]True or false: \\
 \hspace{15pt}(a) If $A^2$ is defined then $A$ is necessarily square. \\
 \hspace{15pt}(b) If $AB$ and $BA$ are defined then $A$ and $B$ are square. \\
@@ -781,16 +1076,102 @@ Write down the correct rule for $(A + B)(A + B) = A^2 + \underline{\hspace{8mm}}
 \hspace{15pt}(d) If $A B = B$ then $A = I$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.14 ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{15pt}(a) True \\
+\hspace{15pt}(b) False - If $A$ is an $m$ x $n$ matrix and $B$ is an $n$ x $m$ matrix then $AB$ is defined and results in\\ \hspace{40pt} an $m$ x $m$ matrix and $BA$ is also defined, resulting in a $n$ x $n$ matrix. \\
+\hspace{15pt}(c) True \\
+\hspace{15pt}(d) False - $B$ could be a zero matrix. \\
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.4.22]By trial and error find real nonzero 2 by 2 matrices such that \\
 \vspace{3mm}
 \hspace{35pt}
-$ A^2=-I \hspace{20pt} BC=0 \hspace{20pt} DE = -ED$ (not allowing $DE = 0$). 
+$ A^2=-I \hspace{20pt} BC=0 \hspace{20pt} DE = -ED$ (not allowing $DE = 0$). \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.22 ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{20pt}If 
+$
+$$
+A=
+\begin{bmatrix}
+0&1 \\
+-1&0 \\
+\end{bmatrix}
+$$
+$
+then $A^2=-I$.
+\hspace{15pt}If 
+$
+$$
+B=
+\begin{bmatrix}
+-1&1 \\
+0&0 \\
+\end{bmatrix}
+$$
+$
+ and 
+$
+$$
+C=
+\begin{bmatrix}
+1&0 \\
+1&0 \\
+\end{bmatrix}
+$$
+$
+ then $BC=0$. \\
+\hspace{80pt}If 
+$
+$$
+D=
+\begin{bmatrix}
+0&2 \\
+2&0 \\
+\end{bmatrix}
+$$
+$
+ and 
+$
+$$
+E=
+\begin{bmatrix}
+0&2 \\
+-2&0 \\
+\end{bmatrix}
+$$
+$
+ then $DE=-ED$.
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.4.23]\hspace{10pt}(a) Find a nonzero matrix $A$ for which $A^2=0$. \\
 \hspace{10pt}(b) Find a matrix that has $A^2 \neq 0$ but $A^3 = 0$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.23 ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{10pt}(a) If 
+$
+$$
+A=
+\begin{bmatrix}
+1&1 \\
+-1&-1 \\
+\end{bmatrix}
+$$
+$
+ then $A^2=-I$. \\
+\vspace{1mm}
+\hspace{10pt}(b) If 
+$
+$$
+A=
+\begin{bmatrix}
+0&1&0 \\
+0&0&1 \\
+0&0&0 \\
+\end{bmatrix}
+$$
+$
+ then $A^2 \neq 0$ but $A^3=0$. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[2.4.29]Which matrices $E_{21}$ and $E_{31}$ produce zeros in the $(2, 1)$ and $(3, 1)$ positions of $E_{21} A$ and $E_{31}A$? \\
 \vspace{3mm}
 \hspace{162pt}
@@ -805,23 +1186,79 @@ A=
 $$
 $. \\
 \vspace{3mm}
-Find the single matrix $E = E_{31} E_{21}$ that produces both zeros at once. Multiply $EA$. 
+Find the single matrix $E = E_{31} E_{21}$ that produces both zeros at once. Multiply $EA$. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 2.4.29 ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{15pt}
+$
+$$
+E_{21}=
+\begin{bmatrix}
+1&0&0 \\
+1&1&0 \\
+0&0&1 \\
+\end{bmatrix}
+\hspace{15pt}
+E_{31}=
+\begin{bmatrix}
+1&0&0 \\
+0&1&0 \\
+-4&0&1 \\
+\end{bmatrix}
+\hspace{15pt}
+E=
+\begin{bmatrix}
+1&0&0 \\
+1&1&0 \\
+-4&0&1 \\
+\end{bmatrix}
+\hspace{15pt}
+EA=
+\begin{bmatrix}
+2&1&0 \\
+0&1&1 \\
+0&1&3 \\
+\end{bmatrix}
+$$
+$ \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 2.5}
 \begin{enumerate}
-\item[2.5.7] (Important) If $A$ has row $1 +$ row $3$, show that $A$ is  not invertible: \\
+\item[2.5.7] (Important) If $A$ has row $1 +$ row $2=$ row $3$, show that $A$ is  not invertible: \\
 (a.) Explain why $Ax = (1, 0, 0)$ cannot have a solution. \\
 (b.) Which right sides $(b_1, b_2, b_3)$ might allow a solution to $Ax = b$?\\
 (c.) What happens to row 3 in elimination?\\
-\item[2.5.13] If the product $M = ABC$ of three wquare matries is invertible, then $B$ is invertible. \\
+\vspace{3mm}
+(a) Equation 1 + equation 2 - equation 3 should equal zero, but it equals 1. \\
+(b) Right side must be $b_1+b_2=b_3$. \\
+(c) Row three becomes a row of zeros. Therefore there is no third pivot and A is not invertible.
+\vspace{3mm}
+\item[2.5.13] If the product $M = ABC$ of three square matrices is invertible, then $B$ is invertible. \\
 (So are $A$ and $C$.) Find a formula for $B^{-1}$ that involves $M^{-1}$ and $A$ and $C$.\\
+\vspace{3mm}
+$\hspace{5pt} M=ABC \hspace{6pt} \rightarrow \hspace{6pt} A^{-1}M=BC \hspace{6pt} \rightarrow \hspace{6pt} B^{-1}A^{-1}M=C \hspace{6pt} \rightarrow \hspace{6pt} B^{-1}A^{-1}=CM^{-1} \hspace{6pt} \rightarrow \hspace{6pt} B^{-1}=CM^{-1}A$ \\
+\vspace{3mm}
 \item[2.5.29] True or false (with a counterexample if false and a reason if true):\\
 (a) A 4 by 4 matrix with a row of zeros is not invertible.\\
 (b) Every matrix with 1's down the main diagonal is invertible.\\
 (c) If $A$ is invertible then $A^{-1}$ and $A^2$ are invertible.\\
+\vspace{3mm}
+(a) True - a pivot would be missing \\
+(b) False - the matrix 
+$
+$$
+\begin{bmatrix}
+1&1 \\
+1&1 \\
+\end{bmatrix}
+$$
+$
+ is not invertible. \\
+(c) True - the inverse of $A^{-1}$ is $A$ and the inverse of $A^2$ is $(A^{-1})^2$. \\
+\vspace{3mm}
 \item[2.5.30] For which three numbers $c$ is this matrix not invertible, and why not?\\
 \begin{center}
 $
@@ -835,6 +1272,11 @@ c&c&c\\
 $$
 $
 \end{center}
+\vspace{3mm}
+\hspace{75pt}$c=0$, there is a row of zeros. \\
+\hspace{75pt}$c=2$, row one and two would be the same. \\
+\hspace{75pt}$c=7$, columns 2 and 3 would be the same. \\
+\vspace{3mm}
 \item[2.5.31] Prove that $A$ is invertible if $a\neq 0$ and $a \neq b$ (find the pivots or $A^{-1}$):\\
 \begin{center}
 $
@@ -849,10 +1291,30 @@ $$
 $
 \end{center}
 \end{enumerate}
+\vspace{3mm}
+\begin{center}
+$
+$$
+\begin{bmatrix}
+a&b&b\\
+0&a-b&0\\
+0&a-b&a-b\\
+\end{bmatrix}
+\hspace{15pt} \rightarrow \hspace{15pt}
+\begin{bmatrix}
+a&b&b\\
+0&a-b&0\\
+0&0&a-b\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{2mm}
+There are 3 pivots, the matrix must be invertible. \\
+\end{center}
 \vspace{5mm}
 \textbf{Chapter 2.6}
 \begin{enumerate}
-\item[2.6.7] What three eleimination matrices $E_{21}, E_{31}, E_{32}$ put $A$ into its upper triangular form $E_{21}, E_{31}, E_{32}A = U$? Multiply by $E_{32}^{-1}, E_{31}^{-1}$ and  $E_{21}^{-1}$ to factor $A$ into $L$ times $U$:\\
+\item[2.6.7] What three elimination matrices $E_{21}, E_{31}, E_{32}$ put $A$ into its upper triangular form $E_{21}, E_{31}, E_{32}A = U$? Multiply by $E_{32}^{-1}, E_{31}^{-1}$ and  $E_{21}^{-1}$ to factor $A$ into $L$ times $U$:\\
 \begin{center}
 $
 $$
@@ -866,7 +1328,82 @@ $$
 $
 $L = E_{32}^{-1} E_{31}^{-1} E_{21}^{-1}$\\
 \end{center}
-\item[2.6.8] Suppose $A$ is already lower trianglular with 1's on the diagonal. Then $U = I$!\\
+\vspace{3mm}
+\begin{center}
+$
+$$
+E_{21}=
+\begin{bmatrix}
+1&0&0\\
+-2&1&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{31}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+-3&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{32}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&-2&1\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{1mm}
+$
+$$
+E^{-1}_{21}=
+\begin{bmatrix}
+1&0&0\\
+2&1&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E^{-1}_{31}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+3&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E^{-1}_{32}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&2&1\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{1mm}
+$
+$$
+A=LU \hspace{15pt} \rightarrow \hspace{15pt}
+\begin{bmatrix}
+1&0&1\\
+2&2&2\\
+3&4&5\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1&0&0\\
+2&1&0\\
+3&2&1\\
+\end{bmatrix}
+\begin{bmatrix}
+1&0&1\\
+0&2&0\\
+0&0&2\\
+\end{bmatrix}
+$$
+$ \\
+\end{center}
+\vspace{3mm}
+\item[2.6.8] Suppose $A$ is already lower triangular with 1's on the diagonal. Then $U = I$!\\
 \begin{center}
 $
 $$
@@ -874,29 +1411,134 @@ A= L=
 \begin{bmatrix}
 1&0&0\\
 a&1&0\\
-b&c&0\\
+b&c&1\\
 \end{bmatrix}
 $$
 $
 \end{center}
 The elimination matrices $E_{21}, E_{31}, E_{32}$ contain -a then -b then -c.\\
-(a) Multiply $E_{32}, E_{31}, E_{21}$ to find the single matric $E$ that produces $EA = I$.\\
+(a) Multiply $E_{32}, E_{31}, E_{21}$ to find the single matrix $E$ that produces $EA = I$.\\
 (b) Multiply $E_{21}^{-1} E_{31}^{-1} E_{32}^{-1}$ to bring back $L$ (nicer than $E$).\\
+\vspace{3mm}
+\begin{center}
+(a)\hspace{10pt}
+$
+$$
+E_{21}=
+\begin{bmatrix}
+1&0&0\\
+-a&1&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{31}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+-b&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{32}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&-c&1\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{1mm}
+$
+$$
+E_{32}*E_{31}*E_{21}=E=
+\begin{bmatrix}
+1&0&0\\
+-a&1&0\\
+ac-b&-c&1\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{1mm}
+(b)\hspace{10pt}
+$
+$$
+E_{21}^{-1}=
+\begin{bmatrix}
+1&0&0\\
+a&1&0\\
+0&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{31}^{-1}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+b&0&1\\
+\end{bmatrix}
+\hspace{15pt}
+E_{32}^{-1}=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&c&1\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{1mm}$
+$$
+E_{32}^{-1}*E_{31}^{-1}*E_{21}^{-1}=L=
+\begin{bmatrix}
+1&0&0\\
+a&1&0\\
+b&c&1\\
+\end{bmatrix}
+$$
+$ \\
+\end{center}
+\vspace{3mm}
 \item[2.6.13] Compute $L$ and $U$ for the symmetric matrix $A$:\\
 \begin{center}
 $
 $$
 A=
 \begin{bmatrix}
-a&r&r&r\\
-a&b&s&s\\
-a&b&c&t\\
+a&a&a&a\\
+a&b&b&b\\
+a&b&c&c\\
 a&b&c&d\\
 \end{bmatrix}
 $$
 $
 \end{center}
 Find four conditions on $a, b, c, d$ to get $A = LU$ with four pivots.\\
+\vspace{3mm}
+\begin{center}
+$
+$$
+L=
+\begin{bmatrix}
+1&0&0&0\\
+1&1&0&0\\
+1&1&1&0\\
+1&1&1&1\\
+\end{bmatrix}
+$$
+$
+\hspace{25pt}
+$
+$$
+U=
+\begin{bmatrix}
+a&a&a&a\\
+0&b-a&b-a&b-a\\
+0&0&c-b&c-b\\
+0&0&0&d-c\\
+\end{bmatrix}
+$$
+$ \\
+\vspace{3mm}
+$a \neq 0, b \neq a, c \neq b, d \neq c$. \\
+\end{center}
+\vspace{3mm}
 \item[2.6.16] Solve $L\pmb{c} = \pmb{b}$ to find $\pmb{c}$. Then solve $U\pmb{x} = \pmb{c}$ to find $\pmb{x}$. \textbf{What was} $A$?\\
 \begin{center}
 $
