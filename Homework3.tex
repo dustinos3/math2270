@@ -1,0 +1,211 @@
+\documentclass[10pt,twoside,reqno]{article}
+\usepackage[marginparsep=1em]{geometry}
+\geometry{lmargin=1.0in,rmargin=1.0in, bmargin=0.75in,  tmargin=0.75in}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amsthm}
+ \usepackage{pgfplots}
+ \usepackage{tikz-3dplot}
+ \usetikzlibrary{shapes.geometric}
+ \usepackage{float}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{chngcntr}
+\usepackage{multicol, comment}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead{\fancyplain{}{}} 
+\fancyhead[RE,RO]{MATH 2270}
+\fancyfoot[RE,LO]{Dr. Heavilin}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+\begin{flushright}
+\begin{minipage}{.25\textwidth}
+Dustin Ginos: \\
+A01233669\\
+Chandler Kinch: \\
+A01662772\\
+Jeff Wasden: \\
+A01657029\\
+
+\today
+\end{minipage}
+\end{flushright}
+
+\center{\textbf{\underline{Homework 3}}}\\
+\vspace{5mm}
+\textbf{Chapter 3.1}
+\begin{enumerate}
+\item[3.1.10] Which of the following subsets of ${\mathbb R}^3$ are actually subspaces? \\ \vspace{1mm}
+{\addtolength{\leftskip}{5mm}
+(a) The plane of vectors $(b_1, b_2 , b_3)$ with $b_1 = b_2$. \\ \vspace{1mm}
+(b) The plane of vectors with $b_1 = 1$. \\ \vspace{1mm}
+(c) The vectors with $b_1b_2b_3 = 0$. \\ \vspace{1mm}
+(d) All linear combinations of $v = (1,4,0)$ and $w = (2,2,2)$. \\ \vspace{1mm}
+(e) All vectors that satisfy $b_1 + b_2 + b_3 = O$. \\ \vspace{1mm}
+(f) All vectors with $b_1 < b_2 < b_3$.  \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.1.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.1.17] \hspace{5mm}(a) Show that the set of \textit{invertible} matrices in $M$ is not a subspace. \\ \vspace{1mm}
+\hspace{5mm}(b) Show that the set of \textit{singular} matrices in $M$ is not a subspace.\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.1.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.1.18] True or false (check addition in each case by an example): \\ \vspace{1mm}
+{\addtolength{\leftskip}{5mm}
+(a) The symmetric matrices in $M$ (with $A^T = A$) form a subspace. \\ \vspace{1mm}
+(b) The skew-symmetric matrices in $M$ (with $A^T = -A$) form a subspace. \\ \vspace{1mm}
+(c) The unsymmetric matrices in $M$ (with $A^T \neq -A$) form a subspace.\\ \vspace{1mm}
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.1.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.1.27] True or false (with a counterexample if false): \\ \vspace{1mm}
+{\addtolength{\leftskip}{5mm}
+(a) The vectors $b$ that are not in the column space $C (A)$ form a subspace. \\ \vspace{1mm}
+(b) If $C (A)$ contains only the zero vector, then $A$ is the zero matrix.\\ \vspace{1mm} 
+(c) The column space of $2A$ equals the column space of $A$. \\ \vspace{1mm}
+(d) The column space of $A - I$ equals the column space of $A$ (test this).\\ \vspace{1mm}
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.1.27 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.1.28] Construct a 3 by 3 matrix whose column space contains (1, 1,0) and (1,0,1) but not (1,1, 1). Construct a 3 by 3 matrix whose column space is only a line. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.1.28 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 3.2}
+\begin{enumerate}
+\item[3.2.9] True or false (with reason if true or example to show it is false): \\ \vspace{1mm}
+{\addtolength{\leftskip}{5mm}
+(a) A square matrix has no free variables. \\ \vspace{1mm}
+(b) An invertible matrix has no free variables. \\ \vspace{1mm}
+(c) An m by n matrix has no more than n pivot variables. \\ \vspace{1mm}
+(d) An m by n matrix has no more than m pivot variables. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.9 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.19] Prove that $U$ and $A = LU$ have the same nullspace when $L$ is invertible: \\
+\begin{center}
+If $Ux = 0$ then $LUx = 0$. If $LUx = 0$, how do you know $Ux = 0$? \\
+\end{center}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.21] Construct a matrix whose nullspace consists of all combinations of (2,2,1,0) and (3,1,0,1).\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.22] Construct a matrix whose nullspace consists of all multiples of (4, 3, 2,1).\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.22 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.23] Construct a matrix whose column space contains (1, 1, 5) and (0, 3, 1) and whose nullspace contains (1, 1,2). \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.23 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.24] Construct a matrix whose column space contains (1, 1,0) and (0,1,1) and whose nullspace contains (1,0,1) and (0,0,1). \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.24 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.25] Construct a matrix whose column space contains (1, 1, 1) and whose nullspace is the line of multiples of (1, 1, 1, 1).\\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.25 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.26] Construct a 2 by 2 matrix whose nullspace equals its column space. This is possible. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.26 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.27] Why does no 3 by 3 matrix have a nullspace that equals its column space? \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.27 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.28] If $AB = 0$ then the column space of $B$ is contained in the \underline{\hspace{8mm}} of $A$. Give an example of $A$ and $B$. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.28 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.2.29] The reduced form $R$ of a 3 by 3 matrix with randomly chosen entries is almost sure to be \underline{\hspace{8mm}}. What $R$ is virtually certain if the random $A$ is 4 by 3? \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.2.29 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 3.3}
+\begin{enumerate}
+\item[3.3.10] Choose vectors $u$ and $v$ so that $A = uv^T$ = column times row: \\
+\begin{center}
+$
+$$
+A =
+\begin{bmatrix}
+3&6&6\\
+1&2&2\\
+4&8&8\\
+\end{bmatrix}
+\hspace{5mm}
+$$
+$
+and
+\hspace{5mm}
+$
+$$
+A = 
+\begin{bmatrix}
+2&2&6&4\\
+-1&-1&-3&-2\\
+\end{bmatrix}
+\hspace{5mm}
+$$
+$
+. \\
+\end{center}
+\textit{$A = uv^T$ is the natural form for every matrix that has rank $r = 1$.}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.3.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[3.3.23] Answer the same questions as in Worked Example \textbf{3.3 C} for \\
+\begin{center}
+$
+$$
+A =
+\begin{bmatrix}
+1&1&2&2\\
+2&2&4&4\\
+1&c&2&2\\
+\end{bmatrix}
+\hspace{5mm}
+$$
+$
+and
+\hspace{5mm}
+$
+$$
+B = 
+\begin{bmatrix}
+1-c&2\\
+0&2-c\\
+\end{bmatrix}
+\hspace{5mm}
+$$
+$
+. \\
+\end{center}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.3.23 ~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{enumerate}
+\end{document}
