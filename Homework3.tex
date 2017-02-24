@@ -914,81 +914,450 @@ $ rank = 2\\
 (a) All vectors whose components are equal.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.16 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+S=\left\{
+\begin{bmatrix}
+1\\
+1\\
+1\\
+1\\
+\end{bmatrix}
+\right\}
+$$
+$ Only one vector so therefore it is linearly independent. \\
+$
+$$
+C=
+\begin{bmatrix}
+1\\
+1\\
+1\\
+1\\
+\end{bmatrix}
+ = 
+\begin{bmatrix}
+c\\
+c\\
+c\\
+c\\
+\end{bmatrix}
+$$
+$ all components are equal. \\
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) All vectors whose components add to zero.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.16 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+S=\left\{
+\begin{bmatrix}
+1\\
+-1\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+-1\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+0\\
+-1\\
+\end{bmatrix}
+\right\}
+$$
+$
+\\ \vspace{2mm}
+$
+$$a \neq 0,b \neq 0, c \neq 0 \hspace{12mm}
+a
+\begin{bmatrix}
+1\\
+-1\\
+0\\
+0\\
+\end{bmatrix}+b
+\begin{bmatrix}
+1\\
+0\\
+-1\\
+0\\
+\end{bmatrix}+c
+\begin{bmatrix}
+1\\
+0\\
+0\\
+-1\\
+\end{bmatrix} =
+\begin{bmatrix}
+a+b+c\\
+-a\\
+-b\\
+-c\\
+\end{bmatrix} \neq 0
+$$
+$ \\
+\vspace{2mm}
+There is no linear combination of the vectors that will equal the zero vector. The above equation also shows that if all components of the right hand side vector are added together the result is zero.
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) All vectors that are perpendicular to $(1, 1, 0, 0)$ and $(1, 0, 1, 1)$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.16 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+S=\left\{
+\begin{bmatrix}
+1\\
+-1\\
+-1\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+-1\\
+0\\
+-1\\
+\end{bmatrix}
+\right\}
+$$
+$
+\\ \vspace{2mm}
+$
+$$a \neq 0,b \neq 0 \hspace{12mm}
+a
+\begin{bmatrix}
+1\\
+-1\\
+-1\\
+0\\
+\end{bmatrix}+b
+\begin{bmatrix}
+1\\
+-1\\
+0\\
+-1\\
+\end{bmatrix} =
+\begin{bmatrix}
+a+b\\
+-a-b\\
+-b\\
+-c\\
+\end{bmatrix} \neq 0
+$$
+$ It is linearly independent.\\
+\vspace{2mm}
+$
+$$
+\begin{bmatrix}
+a+b\\
+-a-b\\
+-b\\
+-c\\
+\end{bmatrix} \bullet
+\begin{bmatrix}
+1\\
+1\\
+0\\
+0\\
+\end{bmatrix} = 0
+\hspace{12mm}
+\begin{bmatrix}
+a+b\\
+-a-b\\
+-b\\
+-c\\
+\end{bmatrix} \bullet
+\begin{bmatrix}
+1\\
+0\\
+1\\
+1\\
+\end{bmatrix} = 0
+$$
+$ \\
+\vspace{2mm} This shows that any vector from the set will be perpendicular to (1,1,0,0) and (1,0,1,1)
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (d) The column space and the nullspace of \textit{\textbf{I}} $(4$ by $4)$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.16 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+C(I)=\left\{
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+1\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+0\\
+1\\
+\end{bmatrix}
+\right\}
+$$
+$
+\\ \vspace{2mm}
+$N(I)=0$
+\\ \vspace{2mm}
+Each vector in the set is orthogonal to each other vector in the set. This can be seen by taking the dot product between each vector. \\ \vspace{2mm}
+The basis spans the entire set by definition of the column space of a matrix.\\
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.5.24] True of false (give a good reason):\\
 (a) If the columns of a matrix are dependent, so are the rows.\\
 \vspace{3mm} 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.24 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{8mm}False. In the matrix 
+$
+$$
+\begin{bmatrix}
+1&1&2\\
+3&7&10\\
+\end{bmatrix}
+$$
+$
+ the last column is dependent on the first two but the rows are independent. \\ \vspace{4mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) The column space of a $2$ by $2$ matrix is the same as its row space.\\
 \vspace{3mm} 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.24 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+False. 
+$
+$$
+A =
+\begin{bmatrix}
+1&1\\
+3&7\\
+\end{bmatrix}
+\hspace{12mm}
+C(A)=\left\{
+\begin{bmatrix}
+1\\
+3\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+7\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+$
+$$
+C(A^T) \neq C(A)
+\hspace{12mm}
+C(A^T)=\left\{
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+3\\
+7\\
+\end{bmatrix}
+\right\}
+$$
+$
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) The column space of a $2$ by $2$ matrix has the same dimension as its row space.\\
 \vspace{3mm} 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.24 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+True. 
+$
+$$
+A =
+\begin{bmatrix}
+a&b\\
+c&d\\
+\end{bmatrix}
+\hspace{12mm}
+C(A)=\left\{
+\begin{bmatrix}
+a\\
+c\\
+\end{bmatrix},
+\begin{bmatrix}
+b\\
+d\\
+\end{bmatrix}
+\right\}
+\hspace{12mm}
+C(A^T)=\left\{
+\begin{bmatrix}
+a\\
+b\\
+\end{bmatrix},
+\begin{bmatrix}
+c\\
+d\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+Both $C(A)$ and $C(A^T)$ have the same dimension.
+\end{center}
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (d) The columns of a matrix are a basis for the column space.\\
 \vspace{3mm} 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.24 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+False. 
+$
+$$
+A =
+\begin{bmatrix}
+1&3&4\\
+1&4&5\\
+1&5&6\\
+\end{bmatrix}
+\hspace{12mm}
+C(A)=\left\{
+\begin{bmatrix}
+1\\
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+3\\
+4\\
+5\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+$C(A)$ only has two vectors, meaning a column was excluded from $A$.
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.5.26]  Find a basis (and the dimension) for each of these subspaces of $3$ by $3$ matrices:\\
 (a) All diagonal matrices.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.26 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+S = \left\{
+\begin{bmatrix}
+1&0&0\\
+0&0&0\\
+0&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&0\\
+0&1&0\\
+0&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&0\\
+0&0&0\\
+0&0&1\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+Dimension = 3
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) All symmetric matrices $(A^T = A)$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.26 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+S = \left\{
+\begin{bmatrix}
+1&0&0\\
+0&0&0\\
+0&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&0\\
+0&1&0\\
+0&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&0\\
+0&0&0\\
+0&0&1\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&1\\
+0&0&0\\
+1&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&1&0\\
+1&0&0\\
+0&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&0\\
+0&0&1\\
+0&1&0\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+Dimension = 6
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) All skew-symmetric matrices $(A^T = -A)$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.5.26 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+S = \left\{
+\begin{bmatrix}
+0&1&0\\
+-1&0&0\\
+0&0&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&0\\
+0&0&1\\
+0&-1&0\\
+\end{bmatrix},
+\begin{bmatrix}
+0&0&1\\
+0&0&0\\
+-1&0&0\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+Dimension = 3
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate}
 \vspace{5mm}
@@ -1018,9 +1387,148 @@ $
 \end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.2 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+\begin{bmatrix}
+1&0\\
+-2&1\\
+\end{bmatrix}
+\begin{bmatrix}
+1&2&4\\
+2&4&8\\
+\end{bmatrix} = 
+\begin{bmatrix}
+1&2&4\\
+0&0&0\\
+\end{bmatrix} =
+R
+$$
+$ \\ \vspace{3mm}
+$C(A)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+1\\
+2\\
+\end{bmatrix}
+\right\}
+$$
+$ 1 dimensional \hspace{12mm}
+$C(A^T)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+1\\
+2\\
+4\\
+\end{bmatrix}
+\right\}
+$$
+$ 1 dimensional \\ \vspace{2mm}
+$N(A)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+-4\\
+0\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+-2\\
+1\\
+0\\
+\end{bmatrix}
+\right\}
+$$
+$ 2 dimensional \hspace{12mm}
+$N(A^T)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+-2\\
+1\\
+\end{bmatrix}
+\right\}
+$$
+$ 1 dimensional \\ \vspace{4mm}
+$
+$$
+\begin{bmatrix}
+1&0\\
+-2&1\\
+\end{bmatrix}
+\begin{bmatrix}
+1&2&4\\
+2&5&8\\
+\end{bmatrix} = 
+\begin{bmatrix}
+1&2&4\\
+0&1&0\\
+\end{bmatrix} =
+R
+$$
+$ \\ \vspace{3mm}
+$C(B)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+1\\
+2\\
+\end{bmatrix}, 
+\begin{bmatrix}
+2\\
+5\\
+\end{bmatrix}
+\right\}
+$$
+$ 2 dimensional \hspace{12mm}
+$C(B^T)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+1\\
+2\\
+4\\
+\end{bmatrix},
+\begin{bmatrix}
+2\\
+5\\
+8\\
+\end{bmatrix}
+\right\}
+$$
+$ 2 dimensional \\ \vspace{2mm}
+$N(B)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+-4\\
+0\\
+1\\
+\end{bmatrix}
+\right\}
+$$
+$ 1 dimensional \hspace{12mm}
+$N(B^T)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+0\\
+0\\
+\end{bmatrix}
+\right\}
+$$
+$ 1 dimensional \\ \vspace{2mm}
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.3] Find a basis for each of the four subspaces associated with A:\\
 \begin{center}
@@ -1048,62 +1556,248 @@ $
 \end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.3 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$C(A)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+1\\
+1\\
+0\\
+\end{bmatrix}, 
+\begin{bmatrix}
+3\\
+1\\
+0\\
+\end{bmatrix}
+\right\}
+$$
+$ \hspace{12mm}
+$C(A^T)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+0\\
+1\\
+2\\
+3\\
+4\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+2\\
+4\\
+6\\
+\end{bmatrix}
+\right\}
+$$
+$ \\ \vspace{2mm}
+$N(A)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+0\\
+-2\\
+1\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+2\\
+0\\
+-2\\
+1\\
+\end{bmatrix}
+\right\}
+$$
+$ \hspace{12mm}
+$N(A^T)=$SPAN
+$
+$$
+\left\{
+\begin{bmatrix}
+1\\
+-1\\
+1\\
+\end{bmatrix}
+\right\}
+$$
+$
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.13] True of false (with a reason or a counterexample):\\
 (a) If $m = n$ then the row space of $A$ equals the column space.\\
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.13 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+\begin{center}
+False. Proof:
+$
+$$
+\begin{bmatrix}
+1&2&3\\
+3&4&7\\
+1&0&1\\
+\end{bmatrix}
+\hspace{7mm}
+C(A) = \left\{
+\begin{bmatrix}
+1\\
+3\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+2\\
+4\\
+0\\
+\end{bmatrix}
+\right\}
+\hspace{7mm}
+C(A^T)= \left\{
+\begin{bmatrix}
+1\\
+2\\
+3\\
+\end{bmatrix}, 
+\begin{bmatrix}
+3\\
+4\\
+7\\
+\end{bmatrix}
+\right\}
+\hspace{7mm}
+C(A) \neq C(A^T)
+$$
+$
+\end{center}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) The matrices $A$ and $-A$ share the same four subspaces.\\
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.13 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}
+True. Since -A is a multiple of A they have the same four subspaces because each each subspace has closure under multiplication. \\
+\vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) If $A$ and $B$ share the same four subspaces then $A$ is a multiple of $B$.\\
-\vspace{3mm}
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.13 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+False. 
+\hspace{12mm}
+$
+$$
+A=
+\begin{bmatrix}
+1&2\\
+0&3\\
+\end{bmatrix}
+\hspace{12mm}
+B=
+\begin{bmatrix}
+1&4\\
+0&6\\
+\end{bmatrix}
+$$
+$ \\ \vspace{2mm}
+$
+C(A)=C(B)\hspace{6mm}C(A^T)=C(B^T)\hspace{6mm}N(A)=N(B)\hspace{6mm}N(A^T)=N(B^T)\hspace{6mm}A \neq cB
+$
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.21] Suppose $A$ is the sum of two matrices of rank one: $A = \pmb{u}\pmb{v}^T + \pmb{w}\pmb{z}^T$.\\
 (a) Which vectors span the column space of A?\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.21 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}$u$ and $v$ \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) Which vectors span the row space of A?\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.21 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}$v$ and $z$ \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) The rank is less than 2 if \underline{\hspace{7mm}} or if \underline{\hspace{7mm}}.\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.21 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}if $u$ and $w$ are dependent or if $z$ and $w$ are dependent \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (d) Compute A and its rank if $\pmb{u} = \pmb{z} = (1, 0, 0)$ and $\pmb{v} = \pmb{w} = (0, 0, 1)$.\\
 \vspace{3mm} 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.21 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+\begin{bmatrix}
+1\\
+0\\
+0\\
+\end{bmatrix}
+\begin{bmatrix}
+1&0&0\\
+\end{bmatrix}+
+\begin{bmatrix}
+0\\
+0\\
+1\\
+\end{bmatrix}
+\begin{bmatrix}
+0&0&1\\
+\end{bmatrix}
+$$
+$
+\\ \vspace{2mm}
+$
+$$
+\begin{bmatrix}
+1&0&0\\
+0&0&0\\
+0&0&0\\
+\end{bmatrix}+
+\begin{bmatrix}
+0&0&0\\
+0&0&0\\
+0&0&1\\
+\end{bmatrix} = 
+\begin{bmatrix}
+1&0&0\\
+0&0&0\\
+0&0&1\\
+\end{bmatrix}
+$$
+$ \hspace{10mm} rank=2
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.22] Construct $A = uv^T + wz^T$ whose column space has basis $(1, 2, 4), (2, 2, 1)$ and whose row space has basis $(1, 0), (1, 1)$. Write A as $(3$ by $2)$ times $(2$ by $2)$.\\
 \vspace{3mm} 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.22 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+\begin{bmatrix}
+1&2\\
+2&2\\
+4&1\\
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+1&1\\
+\end{bmatrix}=
+\begin{bmatrix}
+3&2\\
+4&2\\
+5&1\\
+\end{bmatrix}
+$$
+$
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.23] Without multiplying matrices, find bases for the row and column spaces of A:\\
 \begin{center}
@@ -1122,48 +1816,83 @@ A =
 $$
 $\\
 \end{center}
-How do you know from these shapes that A cannot be invertible?\\
+How do you know from these shapes that $A$ cannot be invertible?\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.23 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\begin{center}
+$
+$$
+C(A)=\left\{
+\begin{bmatrix}
+1\\
+4\\
+2\\
+\end{bmatrix},
+\begin{bmatrix}
+2\\
+5\\
+7\\
+\end{bmatrix} \right\}
+\hspace{12mm}
+C(A^T)=\left\{
+\begin{bmatrix}
+3\\
+0\\
+3\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+1\\
+2\\
+\end{bmatrix} \right\}
+$$
+$ \\ \vspace{2mm}
+The rank of $A$ cannot be larger then the rank of either of its factors and to be invertible it would need a rank of 3 which is greater than that of either of its factors. \\
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.25] True or false (with a reason or a counterexample):\\
 (a) $A$ and $A^T$ have the same number of pivots.\\
-\vspace{3mm}
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.25 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}True. Both $A$ and $A^T$ have the same rank. \\ \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-(b) $A$ and $A^T$ have the same lft nullspace.\\
-\vspace{3mm}
+(b) $A$ and $A^T$ have the same left nullspace.\\
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.25 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}False. \\
+\begin{center}
+$
+$$
+A=
+\begin{bmatrix}
+1&2\\
+2&4\\
+3&7\\
+\end{bmatrix}
+\hspace{12mm}
+A^T=
+\begin{bmatrix}
+1&2&3\\
+2&4&7\\
+\end{bmatrix}
+$$
+$ \\ \vspace{2mm}
+The dimensions of $N(A^T)$ is 1x3 and $N((A^T)^T)$ is 1x2
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) If the row space equals the column space then $A^T = A$.\\
-\vspace{3mm}
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.25 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}False. If $A$ is invertible and unsymmetric then $C(A)=C(A^T)$ while $A \neq A^T$ \\ \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (d) If $A^T = -A$ then the row space of $A$ equals the column space.\\
-\vspace{3mm}
+\vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.25 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+\hspace{12mm}True. $A$ and $-A$ always have the same row and column space. So if $A^T=-A$, $A$'s row and column space are equal to each other. \\ \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[3.6.26] (\textbf{\textit{Rank of AB}}) if $AB = C$, the rows of $C$ are combinations of the rows of \underline{\hspace{8mm}}. So the rank of $C$ is not greater than the rank of \underline{\hspace{8mm}}. Since $B^TA^T = C^T$, the rank of $C$ is also not greater than the rank of \underline{\hspace{8mm}}.\\  
+\item[3.6.26] (\textbf{\textit{Rank of AB}}) if $AB = C$, the rows of $C$ are combinations of the rows of \underline{\hspace{4mm}$B$\hspace{4mm}}. So the rank of $C$ is not greater than the rank of \underline{\hspace{4mm}$B$\hspace{4mm}}. Since $B^TA^T = C^T$, the rank of $C$ is also not greater than the rank of \underline{\hspace{4mm}$A$\hspace{4mm}}.\\  
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.26 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[3.6.28] Find the ranks of the 8 by 8 checkerboard matrix $B$ and the chess matrix $C$:\\
 \vspace{3mm}
@@ -1196,7 +1925,141 @@ $\\
 The numbers $r, n, b, q, k, p$ are all different. Find bases for the row space and left nullspace of $B$ and $C$. Challenge problem: Find a basis for the nullspace of $C$.\\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 3.6.28 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$B$ - rank 2 \hspace{15mm} $C$ - rank 2 or rank 1 if $p=0$ \\
+The bases for the row space of $B$ and $C$ are the top two rows if $p \neq 0$ (if $p=0$ then its just the top row of $C$). \\
+$
+$$
+N(B^T)=\left\{
+\begin{bmatrix}
+1\\
+0\\
+-1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+-1\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+-1\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+0\\
+-1\\
+0\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+0\\
+0\\
+0\\
+-1\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+-1\\
+\end{bmatrix} \right\}
+$$
+$
+\\ \vspace{2mm}
+$
+$$
+N(C^T)=\left\{
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+1\\
+0\\
+0\\
+0\\
+0\\
+-1\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+0\\
+1\\
+0\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+0\\
+0\\
+1\\
+0\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+0\\
+0\\
+0\\
+0\\
+1\\
+0\\
+0\\
+\end{bmatrix} \right\}
+$$
+$
+\end{center}
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
