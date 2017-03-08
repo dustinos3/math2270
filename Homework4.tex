@@ -45,62 +45,164 @@ A01657029\\
 \vspace{5mm}
 \textbf{Chapter 4.1}
 \begin{enumerate}
-\item[4.1.3]
-\item[4.1.11]
+\item[4.1.3] Construct a matrix with the required property or say why that is impossible: \\
+{\addtolength{\leftskip}{5mm}
+(a)Column space contains 
+$
+\begin{bmatrix}
+1\\
+2\\
+-3\\
+\end{bmatrix}
+$
+ and 
+$
+\begin{bmatrix}
+2\\
+-3\\
+5\\
+\end{bmatrix}
+$
+, nullspace contains 
+$
+\begin{bmatrix}
+1\\
+1\\
+1\\
+\end{bmatrix}
+$ \\
+(b) Row space contains 
+$
+\begin{bmatrix}
+1\\
+2\\
+-3\\
+\end{bmatrix}
+$
+ and 
+$
+\begin{bmatrix}
+2\\
+-3\\
+5\\
+\end{bmatrix}
+$
+, nullspace contains 
+$
+\begin{bmatrix}
+1\\
+1\\
+1\\
+\end{bmatrix}
+$ \\
+(c) $Ax=
+\begin{bmatrix}
+1\\
+1\\
+1\\
+\end{bmatrix}
+$ has a solution and $A^T
+\begin{bmatrix}
+1\\
+0\\
+0\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0\\
+0\\
+\end{bmatrix}
+$ \\
+(d) Every row is orthogonal to every column ($A$ is not the zero matrix) \\
+(e) Columns add up to a column of zeros, rows add to a row of 1's. \\
+}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.3 ~~~~~~~~~~~~~~~~~~~~~~~~
+\vspace{3mm}
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[4.1.11] (Recommended) Draw Figure 4.2 to show each subspace correctly for \\
+\begin{center}
+$
+A=
+\begin{bmatrix}
+1&2\\
+3&6\\
+\end{bmatrix}
+$
+ and 
+$
+B=
+\begin{bmatrix}
+1&0\\
+3&0\\
+\end{bmatrix}
+$.
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.11 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.16]
+\item[4.1.16] Prove that every $y$ in $N(A^T)$ is perpendicular to every $Ax$ in the column space, using the matrix shorthand of equation (2). Start from $A^Ty = 0$. 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.16 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.17]
+\item[4.1.17] If $S$ is the subspace of $R^3$ containing only the zero vector, what is $S^{\perp}$? If $S$ is spanned by (1, 1, 1), what is $S^{\perp}$? If $S$ is spanned by (1, 1, 1) and (1, 1, -1), what is a basis for $S^{\perp}$? \\ 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.17 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.18]
+\item[4.1.18] Suppose $S$ only contains two vectors (1,5,1) and (2,2,2) (not a subspace), Then $S^{\perp}$ is the nullspace of the matrix $A =\underline{\hspace{8mm}}$. $S^{\perp}$ is a subspace even if $S$ is not. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.18 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.21]
+\item[4.1.21] Suppose $S$ is spanned by the vectors (1,2,2,3) and (1,3,3,2). Find two vectors that span $S^{\perp}$, This is the same as solving $Ax = 0$ for which $A$? \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.21 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.22]
+\item[4.1.22] If $P$ is the plane of vectors in $R^4$ satisfying $x_1 + x_2 + x_3 + x_4 = 0$, write a basis for $P^{\perp}$. Construct a matrix that has $P$ as its nullspace.  \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.22 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.24]
+\item[4.1.24] Suppose an $n$ by $n$ matrix is invertible: $AA^{-1} = I$. Then the first column of $A^{-1}$ is orthogonal to the space spanned by which rows of $A$? \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.24 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.25]
+\item[4.1.25] Find $A^T A$ if the columns of $A$ are unit vectors, all mutually perpendicular. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.25 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.28]
+\item[4.1.28] Why is each of these statements false? \\
+{\addtolength{\leftskip}{5mm}
+(a) (1, 1, 1) is perpendicular to (1,1, \-2) so the planes $x + y + z = 0$ and $x + y - 2z = 0$ are orthogonal subspaces. \\
+(b) The subspace spanned by (1,1,0,0,0) and (0,0,0,1,1) is the orthogonal complement of the subspace spanned by (1,-1,0,0,0) and (2,-2,3,4,-4). \\
+(c) Two subspaces that meet only in the zero vector are orthogonal. \\
+}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.28 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.1.33]
+\item[4.1.33] Suppose I give you eight vectors $r_1, r_2, n_l, n_2, c_1, c_2, l_1,l_2$ in $R^4$. \\
+{\addtolength{\leftskip}{5mm}
+(a) What are the conditions for those pairs to be bases for the four fundamental subspaces of a 4 by 4 matrix? \\
+(b) What is one possible matrix $A$? \\
+}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.1.33 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
@@ -110,56 +212,105 @@ A01657029\\
 \vspace{5mm}
 \textbf{Chapter 4.2}
 \begin{enumerate}
-\item[4.2.2]
-\item[4.2.13]
+\item[4.2.2] Draw the projection of $b$ onto $a$ and also compute it from $p = \hat{x}a$: \\
+\begin{center}
+(a) 
+$
+b=
+\begin{bmatrix}
+cos\theta\\
+sin\theta\\
+\end{bmatrix}
+$
+\hspace{3mm}and\hspace{3mm}
+$
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+$
+\hspace{8mm}(b) 
+$
+b=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$
+\hspace{3mm}and\hspace{3mm}
+$
+a=
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+$. \\
+\end{center}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.2 ~~~~~~~~~~~~~~~~~~~~~~~~
+\vspace{3mm}
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[4.2.13] (Quick and Recommended) Suppose $A$ is the 4 by 4 identity matrix with its last column removed. $A$ is 4 by 3. Project $b = (1,2,3,4)$ onto the column space of $A$. What shape is the projection matrix $P$ and what is $P$? \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.13 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.16]
+\item[4.2.16] What linear combination of (1,2,-1) and (1,0,1) is closest to $b = (2, 1, 1)$? \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.16 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.17]
+\item[4.2.17] (Important) If $P^2 = P$ show that $(I - P)^2 = I - P$. When $P$ projects onto the column space of $A$, $I- P$ projects onto the \underline{\hspace{8mm}}. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.17 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.18]
+\item[4.2.18] (a) If $P$ is the 2 by 2 projection matrix onto the line through (1,1), then $I - P$ is the projection matrix onto \underline{\hspace{8mm}}. \\
+ (b) If $P$ is the 3 by 3 projection matrix onto the line through (1,1,1), then $I - P$ is the projection matrix onto \underline{\hspace{8mm}}. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.18 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.19]
+\item[4.2.19] To find the projection matrix onto the plane $x - y - 2z = 0$, choose two vectors in that plane and make them the columns of $A$. The plane should be the column space. Then compute $P = A(A^T A)^{-l} A^T$. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.19 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.26]
+\item[4.2.26] If an $m$ by $m$ matrix has $A^2 = A$ and its rank is $m$, prove that $A = I$. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.26 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.27]
+\item[4.2.27] The important fact that ends the section is this: If $A^TAx = 0$ then $Ax = 0$. New Proof: The vector $Ax$ is in the nullspace of \underline{\hspace{8mm}}. $Ax$ is always in the column space of \underline{\hspace{8mm}}. To be in both of those perpendicular spaces, $Ax$ must be zero. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.27 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.29]
+\item[4.2.29] If $B$ has rank $m$ (full row rank, independent rows) show that $BB^T$ is invertible. 
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.29 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[4.2.30]
+\item[4.2.30] (a) Find the projection matrix $Pc$ onto the column space of $A$ (after looking closely at the matrix!) \\
+\begin{center}
+$
+A=
+\begin{bmatrix}
+3&6&6\\
+4&8&8\\
+\end{bmatrix}
+$
+\end{center}
+ (b) Find the 3 by 3 projection matrix $P_R$ onto the row space of $A$. Multiply $B = P_CAP_R$. Your answer $B$ should be a little surprising-can you explain it?  \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.30 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
