@@ -1315,7 +1315,7 @@ Q =
 2&1\\
 2&-1\\
 \end{bmatrix}
-QQT=
+QQ^T=
 \begin{bmatrix}
 2&1\\
 2&-1\\
@@ -1360,15 +1360,15 @@ $$
 \end{bmatrix}
 ,
 \begin{bmatrix}
-1\\
--1\\
+\frac{1}{\sqrt{2}}\\
+\frac{-1}{\sqrt{2}}\\
 0\\
 \end{bmatrix}
 ,
 \begin{bmatrix}
-1\\
+\frac{1}{\sqrt{2}}\\
 0\\
--1\\
+\frac{-1}{\sqrt{2}}\\
 \end{bmatrix}
 $$
 $
@@ -1443,7 +1443,7 @@ $$
 \end{bmatrix}
 $$
 $\\
-\vspace{40mm}
+\vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[4.4.15] (a) Find orthonormal vectors $q_1, q_2, q_3$ such that $q_1$, $q_2$ span the column space of\\
 \begin{center}
@@ -1547,7 +1547,7 @@ $.\\
 \end{center}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.4.23 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
-A is an invertible matrix so the vectors $q_1 = \left[\begin{smallmatrix} 1\\ 0\\ 0 \end{smallmatrix}\right]$, $q_2 = \left[\begin{smallmatrix} 0\\ 1\\ 0 \end{smallmatrix}\right]$, $q_3 = \left[\begin{smallmatrix} 0\\ 0\\ 1 \end{smallmatrix}\right]$ in the column space and are orthonormal.\\
+A is an invertible matrix so the vectors $q_1 = \left[\begin{smallmatrix} 1\\ 0\\ 0 \end{smallmatrix}\right]$, $q_2 = \left[\begin{smallmatrix} 0\\ 1\\ 0 \end{smallmatrix}\right]$, $q_3 = \left[\begin{smallmatrix} 0\\ 0\\ 1 \end{smallmatrix}\right]$ are in the column space and are orthonormal.\\
 \vspace{3mm}
 $
 $$
@@ -1600,12 +1600,13 @@ $
 \end{center}
 (b) Find a basis for the orthogonal comblement $S^{\perp}$.\\
 \vspace{3mm}
-Since all vectors and all their linear combinations contained in S are orthogonal to the orginal matrix $\left[\begin{smallmatrix} 1\\ 1\\ 1\\ -1 \end{smallmatrix}\right], S\perp$ is the original matrix $\left[\begin{smallmatrix}1\\ 1\\ 1\\ -1\end{smallmatrix}\right]$\\
+Since all vectors and all their linear combinations contained in S are orthogonal to the orginal matrix $\left[\begin{smallmatrix} 1\\ 1\\ 1\\ -1 \end{smallmatrix}\right], S^{\perp}$ is the original matrix $\left[\begin{smallmatrix}1\\ 1\\ 1\\ -1\end{smallmatrix}\right]$\\
 \vspace{3mm}
 (c) Find $b_1$ in $S$ and $b_2$ in $S^{\perp}$ so that $b_1 + b_2 = b = (1, 1, 1, 1)$.\\
+
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.4.24 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
-
+$b_1 = (\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{3}{2})$ \hspace{3mm} $b_2 = (\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{-1}{2})$\\
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[4.4.34] $Q = I - 2uu^T$ is a reflection matrix when $u^Tu = 1$. Two reflections give $Q^2 = I$.\\
 (a) Show that $Qu = -u$. The mirror is perpendicular to $u$.\\
