@@ -128,7 +128,7 @@ $
 -3&5&-2\\
 \end{bmatrix}
 $. \\
-(b) The matrix is impossible to construct because the components of 
+(b) The matrix is impossible to construct because  
 $
 \begin{bmatrix}
 2\\
@@ -136,7 +136,14 @@ $
 5\\
 \end{bmatrix}
 $
- will never add to zero. \\
+ is not perpendicular to 
+$
+\begin{bmatrix}
+1\\
+1\\
+1\\
+\end{bmatrix}
+$. \\
 (c) Can't construct a matrix with 
 $
 \begin{bmatrix}
@@ -371,7 +378,13 @@ $ has $P$ as its nullspace. \\
 \vspace{3mm}
 {\addtolength{\leftskip}{10mm}
 (a) The $r$'s need to be orthogonal to the $n$'s and the $c$'s orthogonal to the $L$'s. \\
-(b) \\
+(b) 
+$
+\begin{bmatrix}
+1&2\\
+0&1\\
+\end{bmatrix}
+$ \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -727,7 +740,7 @@ So $A$ and $A^TA$ have the same nullspace. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.29 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 {\addtolength{\leftskip}{10mm}
-If $B^T=A$ then $A^TA$ is invertible because $A^TA$ is just a linear combination of independent columns. $A^TA=BB^T$. \\
+$A=B^T$ has independent columns, then $A^TA$ must be invertible. From that we can deduce that since $A=B^T$ then $A^T=B$ and therefore $A^TA=BB^T$ meaning that $BB^T$ must be invertible. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -768,6 +781,7 @@ C(A)=
 $ \\
 \begin{center}
 $
+P_C=
 \frac{
 \begin{bmatrix}
 3\\
@@ -778,11 +792,11 @@ $
 \end{bmatrix}
 }{
 \begin{bmatrix}
-3\\
-4\\
+3&4\\
 \end{bmatrix}
 \begin{bmatrix}
-3&4\\
+3\\
+4\\
 \end{bmatrix}
 }
 =
@@ -814,12 +828,12 @@ P_R=
 \end{bmatrix}
 }{
 \begin{bmatrix}
+1&2&2\\
+\end{bmatrix}
+\begin{bmatrix}
 1\\
 2\\
 2\\
-\end{bmatrix}
-\begin{bmatrix}
-1&2&2\\
 \end{bmatrix}
 }
 =
