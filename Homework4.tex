@@ -128,7 +128,7 @@ $
 -3&5&-2\\
 \end{bmatrix}
 $. \\
-(b) The matrix is impossible to construct because the components of 
+(b) The matrix is impossible to construct because  
 $
 \begin{bmatrix}
 2\\
@@ -136,7 +136,14 @@ $
 5\\
 \end{bmatrix}
 $
- will never add to zero. \\
+ is not perpendicular to 
+$
+\begin{bmatrix}
+1\\
+1\\
+1\\
+\end{bmatrix}
+$. \\
 (c) Can't construct a matrix with 
 $
 \begin{bmatrix}
@@ -371,7 +378,13 @@ $ has $P$ as its nullspace. \\
 \vspace{3mm}
 {\addtolength{\leftskip}{10mm}
 (a) The $r$'s need to be orthogonal to the $n$'s and the $c$'s orthogonal to the $L$'s. \\
-(b) \\
+(b) 
+$
+\begin{bmatrix}
+1&2\\
+0&1\\
+\end{bmatrix}
+$ \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -727,7 +740,7 @@ So $A$ and $A^TA$ have the same nullspace. \\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.2.29 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 {\addtolength{\leftskip}{10mm}
-If $B^T=A$ then $A^TA$ is invertible because $A^TA$ is just a linear combination of independent columns. $A^TA=BB^T$. \\
+$A=B^T$ has independent columns, then $A^TA$ must be invertible. From that we can deduce that since $A=B^T$ then $A^T=B$ and therefore $A^TA=BB^T$ meaning that $BB^T$ must be invertible. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -768,6 +781,7 @@ C(A)=
 $ \\
 \begin{center}
 $
+P_C=
 \frac{
 \begin{bmatrix}
 3\\
@@ -778,11 +792,11 @@ $
 \end{bmatrix}
 }{
 \begin{bmatrix}
-3\\
-4\\
+3&4\\
 \end{bmatrix}
 \begin{bmatrix}
-3&4\\
+3\\
+4\\
 \end{bmatrix}
 }
 =
@@ -814,12 +828,12 @@ P_R=
 \end{bmatrix}
 }{
 \begin{bmatrix}
+1&2&2\\
+\end{bmatrix}
+\begin{bmatrix}
 1\\
 2\\
 2\\
-\end{bmatrix}
-\begin{bmatrix}
-1&2&2\\
 \end{bmatrix}
 }
 =
@@ -1315,7 +1329,7 @@ Q =
 2&1\\
 2&-1\\
 \end{bmatrix}
-QQT=
+QQ^T=
 \begin{bmatrix}
 2&1\\
 2&-1\\
@@ -1360,15 +1374,15 @@ $$
 \end{bmatrix}
 ,
 \begin{bmatrix}
-1\\
--1\\
+\frac{1}{\sqrt{2}}\\
+\frac{-1}{\sqrt{2}}\\
 0\\
 \end{bmatrix}
 ,
 \begin{bmatrix}
-1\\
+\frac{1}{\sqrt{2}}\\
 0\\
--1\\
+\frac{-1}{\sqrt{2}}\\
 \end{bmatrix}
 $$
 $
@@ -1443,7 +1457,7 @@ $$
 \end{bmatrix}
 $$
 $\\
-\vspace{40mm}
+\vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[4.4.15] (a) Find orthonormal vectors $q_1, q_2, q_3$ such that $q_1$, $q_2$ span the column space of\\
 \begin{center}
@@ -1547,7 +1561,7 @@ $.\\
 \end{center}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.4.23 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
-A is an invertible matrix so the vectors $q_1 = \left[\begin{smallmatrix} 1\\ 0\\ 0 \end{smallmatrix}\right]$, $q_2 = \left[\begin{smallmatrix} 0\\ 1\\ 0 \end{smallmatrix}\right]$, $q_3 = \left[\begin{smallmatrix} 0\\ 0\\ 1 \end{smallmatrix}\right]$ in the column space and are orthonormal.\\
+A is an invertible matrix so the vectors $q_1 = \left[\begin{smallmatrix} 1\\ 0\\ 0 \end{smallmatrix}\right]$, $q_2 = \left[\begin{smallmatrix} 0\\ 1\\ 0 \end{smallmatrix}\right]$, $q_3 = \left[\begin{smallmatrix} 0\\ 0\\ 1 \end{smallmatrix}\right]$ are in the column space and are orthonormal.\\
 \vspace{3mm}
 $
 $$
@@ -1600,12 +1614,13 @@ $
 \end{center}
 (b) Find a basis for the orthogonal comblement $S^{\perp}$.\\
 \vspace{3mm}
-Since all vectors and all their linear combinations contained in S are orthogonal to the orginal matrix $\left[\begin{smallmatrix} 1\\ 1\\ 1\\ -1 \end{smallmatrix}\right], S\perp$ is the original matrix $\left[\begin{smallmatrix}1\\ 1\\ 1\\ -1\end{smallmatrix}\right]$\\
+Since all vectors and all their linear combinations contained in S are orthogonal to the orginal matrix $\left[\begin{smallmatrix} 1\\ 1\\ 1\\ -1 \end{smallmatrix}\right], S^{\perp}$ is the original matrix $\left[\begin{smallmatrix}1\\ 1\\ 1\\ -1\end{smallmatrix}\right]$\\
 \vspace{3mm}
 (c) Find $b_1$ in $S$ and $b_2$ in $S^{\perp}$ so that $b_1 + b_2 = b = (1, 1, 1, 1)$.\\
+
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 4.4.24 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
-
+$b_1 = (\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{3}{2})$ \hspace{3mm} $b_2 = (\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{-1}{2})$\\
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[4.4.34] $Q = I - 2uu^T$ is a reflection matrix when $u^Tu = 1$. Two reflections give $Q^2 = I$.\\
 (a) Show that $Qu = -u$. The mirror is perpendicular to $u$.\\
