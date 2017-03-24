@@ -309,7 +309,7 @@ True, since multiplication is commutative. $|AB|=|A||B|=|B||A|=|BA|$ \\ \vspace{
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 5.2.9 ~~~~~~~~~~~~~~~~~~~~~~~~
 \vspace{3mm}
 
-
+The determinant for a 3x3 matrix has six terms, half of which are positive. Each value from the matrix is apart of two of those terms, once in a positive and once in a negative term. If all values where all positive 1's or negative 1's the determinant would be three. If there are an even number of negative 1's then the largest the determinant could be would be four.
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -353,15 +353,99 @@ $. \\
 \end{center}
 {\addtolength{\leftskip}{10mm}
 (a) Why is the first statement true? Somehow $B$ doesn't enter. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 5.2.23a ~~~~~~~~~~~~~~~~~~~~~~~~
+\hspace{3mm} Any entry from $B$ times and entry from the zero block is zero, so $B$ can be excluded. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 (b) Show by example that equality fails (as shown) when $C$ enters. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 5.2.23b ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+$
+A=
+\begin{bmatrix}
+1&0\\
+0&0\\
+\end{bmatrix}
+\hspace{5mm}
+B=
+\begin{bmatrix}
+0&0\\
+1&0\\
+\end{bmatrix}
+\hspace{5mm}
+C=
+\begin{bmatrix}
+0&1\\
+0&0\\
+\end{bmatrix}
+\hspace{5mm}
+D=
+\begin{bmatrix}
+0&0\\
+0&1\\
+\end{bmatrix}
+$
+ \\
+$
+|A||D|-|C||B|=0\neq
+\begin{vmatrix}
+1&0&0&0\\
+0&0&1&0\\
+0&1&0&0\\
+0&0&0&1\\
+\end{vmatrix}
+= -1
+$ \\
+\end{center}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 (c) Show by example that the answer det($AD-CB$) is also wrong. \\ \vspace{2mm}
 }
-%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 5.2.23 ~~~~~~~~~~~~~~~~~~~~~~~~
-\vspace{3mm}
-
-
-
-\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 5.2.23c ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+det
+$
+\left(
+\begin{bmatrix}
+1&0\\
+0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+0&0\\
+1&0\\
+\end{bmatrix}
+-
+\begin{bmatrix}
+0&1\\
+0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+0&0\\
+0&1\\
+\end{bmatrix}
+\right)
+=
+$
+det
+$
+\left(
+\begin{bmatrix}
+0&0\\
+0&0\\
+\end{bmatrix}
+-
+\begin{bmatrix}
+0&1\\
+0&0\\
+\end{bmatrix}
+\right)
+\neq
+\begin{vmatrix}
+A&B\\
+C&D\\
+\end{vmatrix}
+= -1
+$ \\
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 \item[5.2.33] The symmetric Pascal matrices have determinant 1. If I subtract 1 from the $n, n$ entry, why does the determinant become zero? (Use rule 3 or cofactors.) \\
@@ -391,10 +475,32 @@ $
  (to explain). \\
 \end{center}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 5.2.33 ~~~~~~~~~~~~~~~~~~~~~~~~
-\vspace{3mm}
-
-
-
+\vspace{2mm}
+\begin{center}
+$
+\begin{vmatrix}
+1&1&1&1\\
+1&2&3&4\\
+1&3&6&10\\
+1&4&10&19\\
+\end{vmatrix}
+=
+\begin{vmatrix}
+1&1&1&1\\
+1&2&3&4\\
+1&3&6&10\\
+1&4&10&20\\
+\end{vmatrix}
++
+\begin{vmatrix}
+1&1&1&1\\
+1&2&3&4\\
+1&3&6&10\\
+0&0&0&-1\\
+\end{vmatrix}
+= 1 + (-1) = 0
+$
+\end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 \end{enumerate}
