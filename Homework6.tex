@@ -1,0 +1,324 @@
+\documentclass[10pt,twoside,reqno]{article}
+\usepackage[marginparsep=1em]{geometry}
+\geometry{lmargin=1.0in,rmargin=1.0in, bmargin=0.75in,  tmargin=0.75in}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{pgfplots}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{shapes.geometric}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{chngcntr}
+\usepackage{multicol, comment}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead{\fancyplain{}{}} 
+\fancyhead[RE,RO]{MATH 2270}
+\fancyfoot[RE,LO]{Dr. Heavilin}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+\begin{flushright}
+\begin{minipage}{.25\textwidth}
+Dustin Ginos: \\
+A01233669\\
+Chandler Kinch: \\
+A01662772\\
+Jeff Wasden: \\
+A01657029\\
+
+\today
+\end{minipage}
+\end{flushright}
+
+\center{\textbf{\underline{Homework 6}}}\\
+\vspace{10mm}
+\textbf{Chapter 6.1}
+\begin{enumerate}
+\item[6.1.2]  Find the eigenvalues and the eigenvectors of these two matrices:\\ 
+\begin{center}
+$
+A=
+\begin{bmatrix}
+1&4\\
+2&3\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+A+I=
+\begin{bmatrix}
+2&4\\
+2&4\\
+\end{bmatrix}
+$. \\
+\end{center}
+$A+I$ has the \underline{\hspace{10mm}} eigenvectors as $A$. Its eigenvalues are \underline{\hspace{10mm}} by 1.
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.2 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.4]  Compute the eigenvalues and eigenvectors of $A$ and $A^2$:\\ 
+\begin{center}
+$
+A=
+\begin{bmatrix}
+-1&3\\
+2&0\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+A^2=
+\begin{bmatrix}
+7&-3\\
+-2&6\\
+\end{bmatrix}
+$. \\
+\end{center}
+$A^2$ has the same \underline{\hspace{10mm}} as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, $A^2$ has eigenvalues \underline{\hspace{10mm}}. In this example, why is $\lambda_1^2+\lambda_2^2=13$? 
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.9]  What do you do to the equation $Ax = \lambda x$, in order to prove (a), (b), and (c)? \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) $\lambda^2$ is an eigenvalue of $A^2$, as in Problem 4.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) $\lambda^{-1}$ is an eigenvalue of $A^{-1}$, as in Problem 3.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) $\lambda=1$ is an eigenvalue of $A+1$, as in Problem 2.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.1.12] Find three eigenvectors for this matrix $P$ (projection matrices have $\lambda = 1$ and 0): \\ 
+\begin{center}
+\textbf{Projection matrix}
+\hspace{20mm}
+$
+P=
+\begin{bmatrix}
+.2&.4&0\\
+.4&.8&0\\
+0&0&1\\
+\end{bmatrix}
+$. \\
+\end{center}
+If two eigenvectors share the same $\lambda$, so do all their linear combinations. Find an eigenvector of $P$ with no zero components. \\
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.12 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.13] From the unit vector \textbf{$u$} = ($\frac{1}{6}, \frac{1}{6}, \frac{3}{6}, \frac{5}{6}$) construct the rank one projection matrix $P = $\textbf{$uu^T$}. This matrix has $P^2 = P$ because \textbf{$u^Tu$} = 1. \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) $Pu=u$ comes from $(uu^T)u=u(\underline{\hspace{10mm}})$. Then $u$ is an eigenvector with $\lambda = 1$.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) If $v$ is perpendicular to $u$ show that $Pv=0$. Then $\lambda = 0$.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) Find three independent eigenvectors of $P$ all with eigenvalue $\lambda=0$.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.1.15] Every permutation matrix leaves $x = (1,1, ... ,1)$ unchanged. Then $\lambda = 1$. Find two more $\lambda$'s (possibly complex) for these permutations, from $det(P - \lambda I) = 0$: \\ 
+\begin{center}
+$
+P=
+\begin{bmatrix}
+0&1&0\\
+0&0&1\\
+1&0&0\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+\begin{bmatrix}
+0&0&1\\
+0&1&0\\
+1&0&0\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.15 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.19] A 3 by 3 matrix $B$ is known to have eigenvalues 0,1,2. This information is enough to find three of these (give the answers where possible): \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) the rank of $B$ \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) the determinate of $B^TB$ \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) the eigenvalues of $B^TB$ \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(d) the eigenvalues of $(B^2+I)^-1$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19d ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.1.21] \textbf{The eigenvalues of $A$ equal the eigenvalues of $A^T$.} This is because $det(A - \lambda I)$ equals $det(A^T - \lambda I)$. That is true because \underline{\hspace{10mm}}. Show by an example that the eigenvectors of $A$ and $A^T$ are \textit{not} the same.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.29] (Review) Find the eigenvalues of $A$, $B$, and $C$: \\
+\begin{center}
+$
+A=
+\begin{bmatrix}
+1&2&3\\
+0&4&5\\
+0&0&6\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+B=
+\begin{bmatrix}
+0&0&1\\
+0&2&0\\
+3&0&0\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+C=
+\begin{bmatrix}
+2&2&2\\
+2&2&2\\
+2&2&2\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.29 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.2}
+\begin{enumerate}
+\item[6.2.2]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.2 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.3}
+\begin{enumerate}
+\item[6.3.1]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.1 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.4}
+\begin{enumerate}
+\item[6.4.4]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.5}
+\begin{enumerate}
+\item[6.5.7]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.7 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.6}
+\begin{enumerate}
+\item[6.6.17]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.7}
+\begin{enumerate}
+\item[6.7.4]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.7.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\end{document}  
