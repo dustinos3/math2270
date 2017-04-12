@@ -264,12 +264,188 @@ $. \\
 \vspace{5mm}
 \textbf{Chapter 6.2}
 \begin{enumerate}
-\item[6.2.2]  .\\ \vspace{2mm}
+\item[6.2.2] If $A$ has $\lambda_1 = 2$ with eigenvector $x_1=
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}$ and $\lambda_2=5$ with $x_2=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}$, use $S \Lambda S^{-1}$ to find $A$. No other matrix has the same $\lambda$'s and $x$'s. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.2 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.2.8] Diagonalize the Fibonacci matrix by completing $S^{-1}$: \\
+\begin{center}
+$
+\begin{bmatrix}
+1&1\\
+1&0\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\lambda_1&\lambda_2\\
+1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_1&0\\
+0&\lambda_2\\
+\end{bmatrix}
+\begin{bmatrix}
+&\\
+&\\
+\end{bmatrix}
+$. \\
+\end{center}
+Do the multiplication $S \Lambda S^{-1}
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}$ to find its second component. This is the \textit{k}th Fibonacci number $F_k=(\lambda_1^k-\lambda_2^k)/(\lambda_1-\lambda_2)$.
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.8 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.2.9] Suppose $G_{k+2}$ is the \textit{average} of the two previous numbers $G_{k+1}$ and $G_k$: \\ 
+\begin{center}
+$G_{k+2}=\frac{1}{2}G_{k+1}+\frac{1}{2}G_k \hspace{8mm} G_{k+1}=G_{k+1}$
+\hspace{10mm} and \hspace{10mm}
+$
+\begin{bmatrix}
+G_{k+2}\\
+G_{k+1}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+A\\
+\end{bmatrix}
+\begin{bmatrix}
+G_{k+1}\\
+G_k\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) Find the eigenvalues and eigenvectors of $A$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) Find the limist as $n \rightarrow \infty$ of the matrices $A^n=S \Lambda S^{-1}$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) If $G_0=0$ and $G_1=1$ show that the Gibonacci numbers approach $\frac{2}{3}$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.2.10] Prove that every third Fibonacci number in 0,1,1,2,3,... is even.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.11] True or false: If the eigenvalues of $A$ are 2,2,5 then the matrix is certainly \\ 
+\begin{center}
+(a) invertible \hspace{10mm} (b) diagonalizable \hspace{10mm} (c) not diagonalizable. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.11 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.15] $A^k=S \Lambda S^{-1}$ approaches the zero matrix as $k \rightarrow \infty$ if and only if every $\lambda$ has absolute value less than \underline{\hspace{10mm}}. Which of these matrices has $A^k \rightarrow 0$? \\ 
+\begin{center}
+$
+A_1=
+\begin{bmatrix}
+.6&.9\\
+.4&.1\\
+\end{bmatrix}
+$
+\hspace{8mm} and \hspace{8mm}
+$
+A_2=
+\begin{bmatrix}
+.6&.9\\
+.1&.6\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.15 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.16] (Recommended) Find $\Lambda$ and $S$ to diagonalize $A_1$ in Problem 15. What is the limit of $\Lambda^k$ as $k \rightarrow \infty$? What is the limit of $S \Lambda^k S^{-1}$? In the columns of this limiting matrix you see the \underline{\hspace{10mm}}. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.16 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.19] Diagonalize $B$ and compute $S \Lambda^k S^{-1}$ to prove this formula for $B^k$: \\
+\begin{center}
+$
+B=
+\begin{bmatrix}
+5&1\\
+0&4\\
+\end{bmatrix}
+$
+\hspace{8mm} has \hspace{8mm}
+$
+B^k=
+\begin{bmatrix}
+5^k&5^k-4^k\\
+0&4^k\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.36] The \textit{n}th power of rotation through $\theta$ is rotation through $n \theta$: \\ 
+\begin{center}
+$
+A^n=
+\begin{bmatrix}
+\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta\\
+\end{bmatrix}^n
+=
+\begin{bmatrix}
+\cos n\theta&-\sin n\theta\\
+\sin n\theta&\cos n\theta\\
+\end{bmatrix}
+$. \\
+\end{center}
+Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors (columns of $S$) are (1,$i$) and ($i$,1). You need to know Euler's formula $e^{i\theta}=\cos\theta+i\sin\theta$.
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.36 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 6.3}
