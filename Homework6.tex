@@ -66,8 +66,46 @@ $. \\
 $A+I$ has the \underline{\hspace{10mm}} eigenvectors as $A$. Its eigenvalues are \underline{\hspace{10mm}} by 1.
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.2 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+\begin{center}
+$A) \hspace{6mm}
+\begin{vmatrix}
+1- \lambda &4 \\
+2&3- \lambda \\
+\end{vmatrix}
+=(1 - \lambda)(3- \lambda )-8= \lambda^2-4 \lambda -5=0
+$ \\
+$\lambda= \pm5,-1
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+2\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$
+\\ \vspace{2mm}
+$A+I) \hspace{6mm}
+\begin{vmatrix}
+2- \lambda &4 \\
+2&4- \lambda \\
+\end{vmatrix}
+=(2 - \lambda)(4- \lambda )-8= \lambda^2-6 \lambda =0
+$ \\
+$\lambda= 0,6
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+2\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$ \\
+\end{center}
+$A+I$ has the \underline{\hspace{3mm}same\hspace{3mm}} eigenvectors as $A$. Its eigenvalues are \underline{\hspace{3mm}increased\hspace{3mm}} by 1. \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.1.4]  Compute the eigenvalues and eigenvectors of $A$ and $A^2$:\\ 
@@ -91,8 +129,71 @@ $. \\
 $A^2$ has the same \underline{\hspace{10mm}} as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, $A^2$ has eigenvalues \underline{\hspace{10mm}}. In this example, why is $\lambda_1^2+\lambda_2^2=13$? 
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.4 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+\begin{center}
+$A) \hspace{6mm}
+\begin{vmatrix}
+-1- \lambda &3 \\
+2&- \lambda \\
+\end{vmatrix}
+=- \lambda(-1- \lambda )-6= \lambda^2 + \lambda -6=0
+$ \\
+$\lambda= 2,-3
+\hspace{8mm}
+\begin{bmatrix}
+-3&3\\
+2&-2\\
+\end{bmatrix}
+x_1=0
+\hspace{8mm}
+\begin{bmatrix}
+2&3\\
+2&3\\
+\end{bmatrix}
+x_2=0
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+- \frac{2}{3}\\
+\end{bmatrix}
+$
+\\ \vspace{2mm}
+$A^2) \hspace{6mm}
+\begin{vmatrix}
+7- \lambda &3 \\
+-2&6- \lambda \\
+\end{vmatrix}
+=(1- \lambda)(6- \lambda )-6= \lambda^2 -13 \lambda +36=0
+$ \\
+$\lambda= 4,9
+\hspace{8mm}
+\begin{bmatrix}
+3&-3\\
+-2&2\\
+\end{bmatrix}
+x_1=0
+\hspace{8mm}
+\begin{bmatrix}
+-2&-3\\
+-2&-3\\
+\end{bmatrix}
+x_2=0
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+- \frac{2}{3}\\
+\end{bmatrix}
+$
+\\ \vspace{2mm}
+\end{center}
+$A^2$ has the same \underline{\hspace{3mm}eigenvectors\hspace{3mm}} as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, $A^2$ has eigenvalues \underline{\hspace{3mm}$\lambda_1^2$ and $\lambda_2^2$\hspace{3mm}}. $\lambda_1^2+\lambda_2^2=13$ because that is the trace of $A^2$. 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.1.9]  What do you do to the equation $Ax = \lambda x$, in order to prove (a), (b), and (c)? \\ \vspace{2mm}
@@ -100,21 +201,24 @@ $A^2$ has the same \underline{\hspace{10mm}} as $A$. When $A$ has eigenvalues $\
 (a) $\lambda^2$ is an eigenvalue of $A^2$, as in Problem 4.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9a ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+Multiply both sides by $A$. \\
+$AAx=A\lambda x \hspace{4mm}\rightarrow\hspace{4mm} A^2x=\lambda Ax \hspace{4mm}\rightarrow\hspace{4mm} A^2x=\lambda \lambda x \hspace{4mm}\rightarrow\hspace{4mm} A^2x=\lambda^2x$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) $\lambda^{-1}$ is an eigenvalue of $A^{-1}$, as in Problem 3.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9b ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+Multiply both sides by $A^{-1}$. \\
+$A^{-1}Ax=A^{-1}\lambda x \hspace{4mm}\rightarrow\hspace{4mm} x=\lambda A^{-1}x \hspace{4mm}\rightarrow\hspace{4mm} \frac{1}{\lambda}x=A^{-1}x$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-(c) $\lambda=1$ is an eigenvalue of $A+1$, as in Problem 2.\\ \vspace{2mm}
+(c) $\lambda+1$ is an eigenvalue of $A+I$, as in Problem 2.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9c ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+Add $Ix=x$ to both sides. \\
+$Ix+Ax=x+\lambda x \hspace{4mm}\rightarrow\hspace{4mm} (A+I)x=(\lambda +1)x$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,8 +239,63 @@ $. \\
 If two eigenvectors share the same $\lambda$, so do all their linear combinations. Find an eigenvector of $P$ with no zero components. \\
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.12 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+\begin{center}
+$
+\lambda=1 \hspace{4mm}
+\begin{bmatrix}
+-.8&.4&0\\
+.4&-.2&0\\
+0&0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{bmatrix}
+=0 \hspace{4mm}
+$
+eigenvectors$=
+\begin{bmatrix}
+0\\
+0\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+2\\
+0\\
+\end{bmatrix}
+$ \\ \vspace{2mm}
+$
+\lambda =0 \hspace{4mm}
+\begin{bmatrix}
+.2&.4&0\\
+.4&.8&0\\
+0&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{bmatrix}
+=0 \hspace{4mm}
+$
+eigenvector$=
+\begin{bmatrix}
+-2\\
+1\\
+0\\
+\end{bmatrix}
+$ \\
+\end{center}
+Combine the eigenvectors when $\lambda =1$ to get an eigenvector of $P$ with no zero components: 
+$
+\begin{bmatrix}
+1\\
+2\\
+1\\
+\end{bmatrix}
+$ \\
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.1.13] From the unit vector \textbf{$u$} = ($\frac{1}{6}, \frac{1}{6}, \frac{3}{6}, \frac{5}{6}$) construct the rank one projection matrix $P = $\textbf{$uu^T$}. This matrix has $P^2 = P$ because \textbf{$u^Tu$} = 1. \\ \vspace{2mm}
@@ -144,21 +303,40 @@ If two eigenvectors share the same $\lambda$, so do all their linear combination
 (a) $Pu=u$ comes from $(uu^T)u=u(\underline{\hspace{10mm}})$. Then $u$ is an eigenvector with $\lambda = 1$.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13a ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+$(uu^T)u=u(\underline{\hspace{3mm}u^Tu\hspace{3mm}})$ \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) If $v$ is perpendicular to $u$ show that $Pv=0$. Then $\lambda = 0$.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13b ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+$Pv=(uu^T)v=u(u^Tv)=u*0=0$ \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) Find three independent eigenvectors of $P$ all with eigenvalue $\lambda=0$.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13c ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+$
+\begin{bmatrix}
+1\\
+1\\
+1\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+-1\\
+1\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+-5\\
+0\\
+0\\
+1\\
+\end{bmatrix}
+$ all have $\lambda=0$ and are independent. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -184,7 +362,46 @@ $. \\
 \end{center}
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.15 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+P=
+\begin{bmatrix}
+0&1&0\\
+0&0&1\\
+1&0&0\\
+\end{bmatrix}
+\hspace{3mm}
+\rightarrow
+\hspace{3mm}
+\begin{vmatrix}
+-\lambda&1&0\\
+0&-\lambda&1\\
+1&0&-\lambda\\
+\end{vmatrix}
+=-\lambda^3+1=0
+\hspace{5mm}
+\lambda=1
+$ \\
+$
+P=
+\begin{bmatrix}
+0&0&1\\
+0&1&0\\
+1&0&0\\
+\end{bmatrix}
+\hspace{3mm}
+\rightarrow
+\hspace{3mm}
+\begin{vmatrix}
+-\lambda&0&1\\
+0&1-\lambda&0\\
+1&0&-\lambda\\
+\end{vmatrix}
+=\lambda^3-\lambda^2-\lambda+1=0
+\hspace{5mm}
+\lambda=1,1,-1
+$ \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,35 +410,70 @@ $. \\
 (a) the rank of $B$ \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19a ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+$B$ is a rank two because it has a $\lambda=0$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) the determinate of $B^TB$ \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19b ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+$|B^TB|$ because $B^TB$ is singular. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) the eigenvalues of $B^TB$ \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19c ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+Can't determine. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (d) the eigenvalues of $(B^2+I)^-1$. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19d ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+$\lambda$'s of $(B^2+I)^{-1}$ are $\lambda=1,\frac{1}{2},\frac{1}{5}$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 }
 \item[6.1.21] \textbf{The eigenvalues of $A$ equal the eigenvalues of $A^T$.} This is because $det(A - \lambda I)$ equals $det(A^T - \lambda I)$. That is true because \underline{\hspace{10mm}}. Show by an example that the eigenvectors of $A$ and $A^T$ are \textit{not} the same.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.21 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+It is true because every square matrix has the property $|A|=|A^T|$. \\
+\vspace{2mm}
+$A=
+\begin{bmatrix}
+1&0\\
+1&2\\
+\end{bmatrix}
+$
+\hspace{4mm} and \hspace{4mm}
+$A^T=
+\begin{bmatrix}
+1&1\\
+0&2\\
+\end{bmatrix}
+$ do not have the same eigen vectors. \\
+Eigenvectors of $A=
+\begin{bmatrix}
+0\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+-1\\
+1\\
+\end{bmatrix}
+$ while $A^T$ has eigenvectors $
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+$. \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -256,7 +508,32 @@ $. \\
 \end{center}
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.29 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+A)\hspace{5mm}
+|A-\lambda I|=
+\begin{vmatrix}
+1-\lambda&2&3\\
+0&4-\lambda&5\\
+0&0&6-\lambda\\
+\end{vmatrix}
+=(1-\lambda)(4-\lambda)(6-\lambda)=0
+\hspace{4mm} \lambda=1,4,6
+$ \\ \vspace{2mm}
+$
+B)\hspace{5mm}
+|B-\lambda I|=
+\begin{vmatrix}
+-\lambda&0&1\\
+0&2-\lambda&0\\
+3&0&-\lambda\\
+\end{vmatrix}
+=(\lambda^2-3)(\lambda+2)=0
+\hspace{4mm} \lambda=2,\pm\sqrt{3}
+$ \\ \vspace{2mm}
+C is a rank one matrix, meaning that two of its $\lambda$'s are zero. The last $\lambda$ is the sum of the diagonals.
+\hspace{6mm} $\lambda=0,0,6$ \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
