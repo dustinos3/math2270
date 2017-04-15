@@ -727,8 +727,85 @@ Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors 
 \vspace{5mm}
 \textbf{Chapter 6.3}
 \begin{enumerate}
-\item[6.3.1]  .\\ \vspace{2mm}
+\item[6.3.1] Find two $\lambda$'s and $x$'s so that $u = e^{\lambda t}x$ solves\\
+\begin{center}
+$
+$$
+\frac{du}{dt} =
+\begin{bmatrix}
+4 && 3\\
+0 && 1\\
+\end{bmatrix}
+u
+$$
+$\\
+\end{center}
+What combination $u = c_1e^{\lambda_1t}x_1 + c_2e^{\lambda_2t}x_2$ starts from $u(0) = (5, -2)$?\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.1 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.3.4] A door is opened between rooms that hold $v(0) = 30$ people and $w(0) = 10$ people. The movement between rooms is proportional to the difference $v - w$:\\
+\begin{center}
+$\frac{dv}{dt} = w - v$ \hspace{3mm} and \hspace{3mm} $\frac{dw}{dt} = v - w$.\\
+\end{center}
+Show that the total $v + w$ is constant (40 people). Find the matrix in $\frac{du}{dt} = Au$ and its eigenvalues and eigenvectors. What are $v$ and $w$ at $t = 1$ and $t = \infty$?\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.3.5] Reverse the diffusion of people in Problem 4 to $\frac{du}{dt} = -Au$:\\
+\begin{center}
+$\frac{dv}{dt} = w - v$ \hspace{3mm} and \hspace{3mm} $\frac{dw}{dt} = v - w$.\\
+\end{center}
+The total $v + w$ still remains constant. How are the $\lambda$'s changed now that $A$ is changed to $-A$? But show that $v(t)$ grows to infinity from $v(0) = 30$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.5 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.3.8] The rabbit population shows fast growth (from 6r) but loss to wolves (from -2w). The wolf population always grows in this model ($-w^2$ would control wolves):\\
+\begin{center}
+$\frac{dr}{dt} = 6r - 2w$ \hspace{3mm} and \hspace{3mm} $\frac{dw}{dt} = 2r + w$.\\
+\end{center}
+Find the eigenvalues and eigenvectos. If $r(0) = w(0) = 30$ what are the populations at time $t$? After a long time, what is the ratio of rabbits to wolves?\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.8 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.3.10] Find A to change the scalar equation $y'' = 5y' + 4y$ into a vector equation for $u = (y, y')$:\\
+\begin{center}
+$
+$$
+\frac{du}{dt} =
+\begin{bmatrix}
+y'\\
+y''\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+&&\\
+&&\\
+\end{bmatrix}
+\begin{bmatrix}
+y\\
+y'\\
+\end{bmatrix}
+= Au
+$$
+$\\
+\end{center}
+What are the eigenvalues of $A$? Find them also by substituting $y = e^{\lambda t}$ into  $y'' = 5y' + 4y$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.3.21] Write $A = \left[\begin{smallmatrix} 1 && 4\\ 0 && 0 \end{smallmatrix} \right]$ in the form $S\Lambda S^{-1}$. Find $e^{At}$ from $Se^{\Lambda t} S^{-1}$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.21 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 \vspace{3mm}
@@ -741,7 +818,7 @@ Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors 
 \begin{bmatrix}
 -2&6\\
 6&7\\
-\end{bmatrix}$. What is $\Lambda$?
+\end{bmatrix}$. What is $\lambda$?
 \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.4 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -821,8 +898,116 @@ $
 \vspace{5mm}
 \textbf{Chapter 6.5}
 \begin{enumerate}
-\item[6.5.7]  .\\ \vspace{2mm}
+\item[6.5.7]  Test to see if $R^R$ is positive definite in each case:\\ 
+\begin{center}
+$
+$$
+R =
+\begin{bmatrix}
+1 && 2\\
+0 && 3\\
+\end{bmatrix}
+$$
+$
+and 
+$
+$$
+R = 
+\begin{bmatrix}
+1 && 1\\
+1 && 2\\
+2 && 1\\
+\end{bmatrix}
+$$
+$
+and
+$
+$$
+R = 
+\begin{bmatrix}
+1 && 1 && 2\\
+1 && 2 && 1\\
+\end{bmatrix}
+$$
+$
+\end{center}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.7 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.5.10] Which 3 by 3 symmetric matrices $A$ and $B$ produce these quadratics?\\
+$x^TAx = 2(x_1^2 + x_2^2 + x_3^2 - x_1x_2 - x_2x_3)$. Why is $A$ positive definite?\\
+$x^TBx = 2(x_1^2 + x_2^2 + x_3^2 - x_1x_2 - x_1x_3-x_2x_3)$. Why is $B$ semidefinite?\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.5.17] A diagonal entry $a_{jj}$ of a symmetric matrix cannot be smaller than all the $\lambda$'s. If it were, then $A - a_{jj}I$ would have \underline{\hspace{7mm}} eigenvalues and would be positive definite. But $A - a_{jj}I$ has a \underline{\hspace{7mm}} on the main diagonal.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.5.18] If $Ax = \lambda x$ then $x^TAx =$ \underline{\hspace{7mm}}. If $x^TAx > 0$, prove that $\lambda > 0$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.5.19] Reverse Problem 18 to show that if all $\lambda > 0$ then $x^TAx > 0$. We must do this for every nonzero x, not just the eigenvectors. So write x as a combination of the eigenvectors and explain why all "cross terms" are $x_i^Tx_j = 0$. Then $x^TAx$ is\\
+\vspace{3mm}
+$(c_1x_1 + \cdots + c_nx_n)^T(c_1\lambda_1x_1 + \cdots + c_n\lambda_nx_n) = c_1^2\lambda_1x_1^Tx_1 + \cdots + c_n^2\lambda_nx_n^Tx_n > 0$.
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.5.20] Give a quick reason why each of these statements is true:\\
+(a) Every positive definite matrix is invertible.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(b) The only positive definite porjection matrix is $P = I$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(c) A diagonal matrix with positive diagonal entries is positive definite.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(d) A symmetric matrix with a positive determinant might not be positive definite!\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.5.28] Without multiplying
+$
+$$
+A =
+\begin{bmatrix}
+cos\theta && -sin\theta\\
+sin\theta && cos\theta \\
+\end{bmatrix}
+\begin{bmatrix}
+2 && 0\\
+0 && 5\\
+\end{bmatrix}
+\begin{bmatrix}
+cos\theta && sin\theta\\
+-sin\theta && cos\theta \\
+\end{bmatrix}
+$$
+$
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.28 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 \vspace{3mm}
@@ -831,8 +1016,64 @@ $
 \vspace{5mm}
 \textbf{Chapter 6.6}
 \begin{enumerate}
-\item[6.6.17]  .\\ \vspace{2mm}
+\item[6.6.17] True of False, with a good reason:\\
+(a) A symmetri  matrix can't be similar to a nonsymmetric matrix.\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) An invertible matrix can't be similar to a singular matrix.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) $A$ can't be similar to $-A$ unless $A = 0$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(d) $A$ can't be similar to $A + I$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.6.18] If $B$ is invertible, prove that $AB$ is similar to $BA$. \textit{They have the ame eigenvalues}.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.18 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.6.20] Why are these statements all true?\\
+(a) If $A$ is similar to $B$ then $A^2$ is similar to $B^2$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(b) $A^2$ and $B^2$ can be similar when $A$ and $B$ are not similar (try $\lambda = 0, 0$).\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(c) $\left[\begin{smallmatrix} 3 && 0\\ 0 && 4 \end{smallmatrix} \right]$ is not similar to $\left[\begin{smallmatrix} 3 && 1\\ 0 && 4 \end{smallmatrix} \right]$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(d) $\left[\begin{smallmatrix} 3 && 0\\ 0 && 3 \end{smallmatrix} \right]$ is not similar to $\left[\begin{smallmatrix} 3 && 1\\ 0 && 3 \end{smallmatrix} \right]$.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+(e) If we echange rows 1 and 2 of $A$, and then exchange columns 1 and 2, \textbf{the eigenvalues stay the same}. In this case $M =$ \underline{\hspace{7mm}}.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.20 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 \vspace{3mm}
@@ -841,8 +1082,52 @@ $
 \vspace{5mm}
 \textbf{Chapter 6.7}
 \begin{enumerate}
-\item[6.7.4]  .\\ \vspace{2mm}
+\item[6.7.4] Find the eigenvalues and unit egienvectors of $A^TA$ and $AA^T$. Keep each $Av = \sigma \pmb{u}$:\\
+\begin{center}
+\textbf{Fibonacci matrix} 
+$
+$$
+\begin{bmatrix}
+1 && 1\\
+1 && 0 \\
+\end{bmatrix}
+$$
+$\\
+\end{center}
+Construct the singular value decomposition and verify that $A$ equals $U \Sigma V^T$.\\
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.7.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+\item[6.7.6] Compute $A^TA$ and $AA^T$ and their eigenvalues and unit eigenvectors for $V$ and $U$.\\
+\begin{center}
+\textbf{Rectangular matrix}
+$
+$$
+A =
+\begin{bmatrix}
+1 && 1 && 0\\
+0 && 1 && 1\\
+\end{bmatrix}
+$$
+$\\
+\end{center}
+Check $AV = U \Sigma$ (this will decide $+=$ signs in $U$). $\Sigma$ has the same shape as $A$.
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.7.6 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.7.10] Construct the matrix with rank one that has $Av = 12u$ for $v = \frac{1}{2}(1, 1, 1, 1)$ and $u = \frac{1}{3}(2, 2, 1)$. It only sigular value is $\sigma_1 = $ \underline{\hspace{7mm}}.\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.7.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.7.11] Suppose $A$ has orthogonal columns $w_1, w_2, \cdots , w_n$ of lengths $\sigma_1, \sigma_2, \cdots, \sigma_n$. What are $U, \Sigma,$ and $V$ in the SVD?\\
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.7.11 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 \vspace{3mm}
