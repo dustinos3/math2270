@@ -1,0 +1,851 @@
+\documentclass[10pt,twoside,reqno]{article}
+\usepackage[marginparsep=1em]{geometry}
+\geometry{lmargin=1.0in,rmargin=1.0in, bmargin=0.75in,  tmargin=0.75in}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amsthm}
+\usepackage{pgfplots}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{shapes.geometric}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{chngcntr}
+\usepackage{multicol, comment}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead{\fancyplain{}{}} 
+\fancyhead[RE,RO]{MATH 2270}
+\fancyfoot[RE,LO]{Dr. Heavilin}
+\fancyfoot[LE,RO]{\thepage}
+
+
+\begin{document}
+\begin{flushright}
+\begin{minipage}{.25\textwidth}
+Dustin Ginos: \\
+A01233669\\
+Chandler Kinch: \\
+A01662772\\
+Jeff Wasden: \\
+A01657029\\
+
+\today
+\end{minipage}
+\end{flushright}
+
+\center{\textbf{\underline{Homework 6}}}\\
+\vspace{10mm}
+\textbf{Chapter 6.1}
+\begin{enumerate}
+\item[6.1.2]  Find the eigenvalues and the eigenvectors of these two matrices:\\ 
+\begin{center}
+$
+A=
+\begin{bmatrix}
+1&4\\
+2&3\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+A+I=
+\begin{bmatrix}
+2&4\\
+2&4\\
+\end{bmatrix}
+$. \\
+\end{center}
+$A+I$ has the \underline{\hspace{10mm}} eigenvectors as $A$. Its eigenvalues are \underline{\hspace{10mm}} by 1.
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.2 ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+$A) \hspace{6mm}
+\begin{vmatrix}
+1- \lambda &4 \\
+2&3- \lambda \\
+\end{vmatrix}
+=(1 - \lambda)(3- \lambda )-8= \lambda^2-4 \lambda -5=0
+$ \\
+$\lambda= \pm5,-1
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+2\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$
+\\ \vspace{2mm}
+$A+I) \hspace{6mm}
+\begin{vmatrix}
+2- \lambda &4 \\
+2&4- \lambda \\
+\end{vmatrix}
+=(2 - \lambda)(4- \lambda )-8= \lambda^2-6 \lambda =0
+$ \\
+$\lambda= 0,6
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+2\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$ \\
+\end{center}
+$A+I$ has the \underline{\hspace{3mm}same\hspace{3mm}} eigenvectors as $A$. Its eigenvalues are \underline{\hspace{3mm}increased\hspace{3mm}} by 1. \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.4]  Compute the eigenvalues and eigenvectors of $A$ and $A^2$:\\ 
+\begin{center}
+$
+A=
+\begin{bmatrix}
+-1&3\\
+2&0\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+A^2=
+\begin{bmatrix}
+7&-3\\
+-2&6\\
+\end{bmatrix}
+$. \\
+\end{center}
+$A^2$ has the same \underline{\hspace{10mm}} as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, $A^2$ has eigenvalues \underline{\hspace{10mm}}. In this example, why is $\lambda_1^2+\lambda_2^2=13$? 
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+$A) \hspace{6mm}
+\begin{vmatrix}
+-1- \lambda &3 \\
+2&- \lambda \\
+\end{vmatrix}
+=- \lambda(-1- \lambda )-6= \lambda^2 + \lambda -6=0
+$ \\
+$\lambda= 2,-3
+\hspace{8mm}
+\begin{bmatrix}
+-3&3\\
+2&-2\\
+\end{bmatrix}
+x_1=0
+\hspace{8mm}
+\begin{bmatrix}
+2&3\\
+2&3\\
+\end{bmatrix}
+x_2=0
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+- \frac{2}{3}\\
+\end{bmatrix}
+$
+\\ \vspace{2mm}
+$A^2) \hspace{6mm}
+\begin{vmatrix}
+7- \lambda &3 \\
+-2&6- \lambda \\
+\end{vmatrix}
+=(1- \lambda)(6- \lambda )-6= \lambda^2 -13 \lambda +36=0
+$ \\
+$\lambda= 4,9
+\hspace{8mm}
+\begin{bmatrix}
+3&-3\\
+-2&2\\
+\end{bmatrix}
+x_1=0
+\hspace{8mm}
+\begin{bmatrix}
+-2&-3\\
+-2&-3\\
+\end{bmatrix}
+x_2=0
+\hspace{8mm}$ eigenvectors$=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+- \frac{2}{3}\\
+\end{bmatrix}
+$
+\\ \vspace{2mm}
+\end{center}
+$A^2$ has the same \underline{\hspace{3mm}eigenvectors\hspace{3mm}} as $A$. When $A$ has eigenvalues $\lambda_1$ and $\lambda_2$, $A^2$ has eigenvalues \underline{\hspace{3mm}$\lambda_1^2$ and $\lambda_2^2$\hspace{3mm}}. $\lambda_1^2+\lambda_2^2=13$ because that is the trace of $A^2$. 
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.9]  What do you do to the equation $Ax = \lambda x$, in order to prove (a), (b), and (c)? \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) $\lambda^2$ is an eigenvalue of $A^2$, as in Problem 4.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+Multiply both sides by $A$. \\
+$AAx=A\lambda x \hspace{4mm}\rightarrow\hspace{4mm} A^2x=\lambda Ax \hspace{4mm}\rightarrow\hspace{4mm} A^2x=\lambda \lambda x \hspace{4mm}\rightarrow\hspace{4mm} A^2x=\lambda^2x$. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) $\lambda^{-1}$ is an eigenvalue of $A^{-1}$, as in Problem 3.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+Multiply both sides by $A^{-1}$. \\
+$A^{-1}Ax=A^{-1}\lambda x \hspace{4mm}\rightarrow\hspace{4mm} x=\lambda A^{-1}x \hspace{4mm}\rightarrow\hspace{4mm} \frac{1}{\lambda}x=A^{-1}x$. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) $\lambda+1$ is an eigenvalue of $A+I$, as in Problem 2.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.9c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+Add $Ix=x$ to both sides. \\
+$Ix+Ax=x+\lambda x \hspace{4mm}\rightarrow\hspace{4mm} (A+I)x=(\lambda +1)x$. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.1.12] Find three eigenvectors for this matrix $P$ (projection matrices have $\lambda = 1$ and 0): \\ 
+\begin{center}
+\textbf{Projection matrix}
+\hspace{20mm}
+$
+P=
+\begin{bmatrix}
+.2&.4&0\\
+.4&.8&0\\
+0&0&1\\
+\end{bmatrix}
+$. \\
+\end{center}
+If two eigenvectors share the same $\lambda$, so do all their linear combinations. Find an eigenvector of $P$ with no zero components. \\
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.12 ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+$
+\lambda=1 \hspace{4mm}
+\begin{bmatrix}
+-.8&.4&0\\
+.4&-.2&0\\
+0&0&0\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{bmatrix}
+=0 \hspace{4mm}
+$
+eigenvectors$=
+\begin{bmatrix}
+0\\
+0\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+2\\
+0\\
+\end{bmatrix}
+$ \\ \vspace{2mm}
+$
+\lambda =0 \hspace{4mm}
+\begin{bmatrix}
+.2&.4&0\\
+.4&.8&0\\
+0&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{bmatrix}
+=0 \hspace{4mm}
+$
+eigenvector$=
+\begin{bmatrix}
+-2\\
+1\\
+0\\
+\end{bmatrix}
+$ \\
+\end{center}
+Combine the eigenvectors when $\lambda =1$ to get an eigenvector of $P$ with no zero components: 
+$
+\begin{bmatrix}
+1\\
+2\\
+1\\
+\end{bmatrix}
+$ \\
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.13] From the unit vector \textbf{$u$} = ($\frac{1}{6}, \frac{1}{6}, \frac{3}{6}, \frac{5}{6}$) construct the rank one projection matrix $P = $\textbf{$uu^T$}. This matrix has $P^2 = P$ because \textbf{$u^Tu$} = 1. \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) $Pu=u$ comes from $(uu^T)u=u(\underline{\hspace{10mm}})$. Then $u$ is an eigenvector with $\lambda = 1$.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+$(uu^T)u=u(\underline{\hspace{3mm}u^Tu\hspace{3mm}})$ \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) If $v$ is perpendicular to $u$ show that $Pv=0$. Then $\lambda = 0$.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+$Pv=(uu^T)v=u(u^Tv)=u*0=0$ \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) Find three independent eigenvectors of $P$ all with eigenvalue $\lambda=0$.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.13c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+$
+\begin{bmatrix}
+1\\
+1\\
+1\\
+-1\\
+\end{bmatrix},
+\begin{bmatrix}
+-1\\
+1\\
+0\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+-5\\
+0\\
+0\\
+1\\
+\end{bmatrix}
+$ all have $\lambda=0$ and are independent. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.1.15] Every permutation matrix leaves $x = (1,1, ... ,1)$ unchanged. Then $\lambda = 1$. Find two more $\lambda$'s (possibly complex) for these permutations, from $det(P - \lambda I) = 0$: \\ 
+\begin{center}
+$
+P=
+\begin{bmatrix}
+0&1&0\\
+0&0&1\\
+1&0&0\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+\begin{bmatrix}
+0&0&1\\
+0&1&0\\
+1&0&0\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.15 ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+$
+P=
+\begin{bmatrix}
+0&1&0\\
+0&0&1\\
+1&0&0\\
+\end{bmatrix}
+\hspace{3mm}
+\rightarrow
+\hspace{3mm}
+\begin{vmatrix}
+-\lambda&1&0\\
+0&-\lambda&1\\
+1&0&-\lambda\\
+\end{vmatrix}
+=-\lambda^3+1=0
+\hspace{5mm}
+\lambda=1
+$ \\
+$
+P=
+\begin{bmatrix}
+0&0&1\\
+0&1&0\\
+1&0&0\\
+\end{bmatrix}
+\hspace{3mm}
+\rightarrow
+\hspace{3mm}
+\begin{vmatrix}
+-\lambda&0&1\\
+0&1-\lambda&0\\
+1&0&-\lambda\\
+\end{vmatrix}
+=\lambda^3-\lambda^2-\lambda+1=0
+\hspace{5mm}
+\lambda=1,1,-1
+$ \\
+\end{center}
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.19] A 3 by 3 matrix $B$ is known to have eigenvalues 0,1,2. This information is enough to find three of these (give the answers where possible): \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) the rank of $B$ \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+$B$ is a rank two because it has a $\lambda=0$. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) the determinate of $B^TB$ \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+$|B^TB|$ because $B^TB$ is singular. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) the eigenvalues of $B^TB$ \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+Can't determine. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(d) the eigenvalues of $(B^2+I)^-1$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.19d ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+$\lambda$'s of $(B^2+I)^{-1}$ are $\lambda=1,\frac{1}{2},\frac{1}{5}$. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.1.21] \textbf{The eigenvalues of $A$ equal the eigenvalues of $A^T$.} This is because $det(A - \lambda I)$ equals $det(A^T - \lambda I)$. That is true because \underline{\hspace{10mm}}. Show by an example that the eigenvectors of $A$ and $A^T$ are \textit{not} the same.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+It is true because every square matrix has the property $|A|=|A^T|$. \\
+\vspace{2mm}
+$A=
+\begin{bmatrix}
+1&0\\
+1&2\\
+\end{bmatrix}
+$
+\hspace{4mm} and \hspace{4mm}
+$A^T=
+\begin{bmatrix}
+1&1\\
+0&2\\
+\end{bmatrix}
+$ do not have the same eigen vectors. \\
+Eigenvectors of $A=
+\begin{bmatrix}
+0\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+-1\\
+1\\
+\end{bmatrix}
+$ while $A^T$ has eigenvectors $
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+$. \\
+\end{center}
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.1.29] (Review) Find the eigenvalues of $A$, $B$, and $C$: \\
+\begin{center}
+$
+A=
+\begin{bmatrix}
+1&2&3\\
+0&4&5\\
+0&0&6\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+B=
+\begin{bmatrix}
+0&0&1\\
+0&2&0\\
+3&0&0\\
+\end{bmatrix}
+$
+\hspace{5mm} and \hspace{5mm}
+$
+C=
+\begin{bmatrix}
+2&2&2\\
+2&2&2\\
+2&2&2\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.1.29 ~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{center}
+$
+A)\hspace{5mm}
+|A-\lambda I|=
+\begin{vmatrix}
+1-\lambda&2&3\\
+0&4-\lambda&5\\
+0&0&6-\lambda\\
+\end{vmatrix}
+=(1-\lambda)(4-\lambda)(6-\lambda)=0
+\hspace{4mm} \lambda=1,4,6
+$ \\ \vspace{2mm}
+$
+B)\hspace{5mm}
+|B-\lambda I|=
+\begin{vmatrix}
+-\lambda&0&1\\
+0&2-\lambda&0\\
+3&0&-\lambda\\
+\end{vmatrix}
+=(\lambda^2-3)(\lambda+2)=0
+\hspace{4mm} \lambda=2,\pm\sqrt{3}
+$ \\ \vspace{2mm}
+C is a rank one matrix, meaning that two of its $\lambda$'s are zero. The last $\lambda$ is the sum of the diagonals.
+\hspace{6mm} $\lambda=0,0,6$ \\
+\end{center}
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.2}
+\begin{enumerate}
+\item[6.2.2] If $A$ has $\lambda_1 = 2$ with eigenvector $x_1=
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}$ and $\lambda_2=5$ with $x_2=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}$, use $S \Lambda S^{-1}$ to find $A$. No other matrix has the same $\lambda$'s and $x$'s. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.2 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.2.8] Diagonalize the Fibonacci matrix by completing $S^{-1}$: \\
+\begin{center}
+$
+\begin{bmatrix}
+1&1\\
+1&0\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\lambda_1&\lambda_2\\
+1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_1&0\\
+0&\lambda_2\\
+\end{bmatrix}
+\begin{bmatrix}
+&\\
+&\\
+\end{bmatrix}
+$. \\
+\end{center}
+Do the multiplication $S \Lambda S^{-1}
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}$ to find its second component. This is the \textit{k}th Fibonacci number $F_k=(\lambda_1^k-\lambda_2^k)/(\lambda_1-\lambda_2)$.
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.8 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.2.9] Suppose $G_{k+2}$ is the \textit{average} of the two previous numbers $G_{k+1}$ and $G_k$: \\ 
+\begin{center}
+$G_{k+2}=\frac{1}{2}G_{k+1}+\frac{1}{2}G_k \hspace{8mm} G_{k+1}=G_{k+1}$
+\hspace{10mm} and \hspace{10mm}
+$
+\begin{bmatrix}
+G_{k+2}\\
+G_{k+1}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+A\\
+\end{bmatrix}
+\begin{bmatrix}
+G_{k+1}\\
+G_k\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) Find the eigenvalues and eigenvectors of $A$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) Find the limist as $n \rightarrow \infty$ of the matrices $A^n=S \Lambda S^{-1}$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) If $G_0=0$ and $G_1=1$ show that the Gibonacci numbers approach $\frac{2}{3}$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+\item[6.2.10] Prove that every third Fibonacci number in 0,1,1,2,3,... is even.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.10 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.11] True or false: If the eigenvalues of $A$ are 2,2,5 then the matrix is certainly \\ 
+\begin{center}
+(a) invertible \hspace{10mm} (b) diagonalizable \hspace{10mm} (c) not diagonalizable. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.11 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.15] $A^k=S \Lambda S^{-1}$ approaches the zero matrix as $k \rightarrow \infty$ if and only if every $\lambda$ has absolute value less than \underline{\hspace{10mm}}. Which of these matrices has $A^k \rightarrow 0$? \\ 
+\begin{center}
+$
+A_1=
+\begin{bmatrix}
+.6&.9\\
+.4&.1\\
+\end{bmatrix}
+$
+\hspace{8mm} and \hspace{8mm}
+$
+A_2=
+\begin{bmatrix}
+.6&.9\\
+.1&.6\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.15 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.16] (Recommended) Find $\Lambda$ and $S$ to diagonalize $A_1$ in Problem 15. What is the limit of $\Lambda^k$ as $k \rightarrow \infty$? What is the limit of $S \Lambda^k S^{-1}$? In the columns of this limiting matrix you see the \underline{\hspace{10mm}}. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.16 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.19] Diagonalize $B$ and compute $S \Lambda^k S^{-1}$ to prove this formula for $B^k$: \\
+\begin{center}
+$
+B=
+\begin{bmatrix}
+5&1\\
+0&4\\
+\end{bmatrix}
+$
+\hspace{8mm} has \hspace{8mm}
+$
+B^k=
+\begin{bmatrix}
+5^k&5^k-4^k\\
+0&4^k\\
+\end{bmatrix}
+$. \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.19 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[6.2.36] The \textit{n}th power of rotation through $\theta$ is rotation through $n \theta$: \\ 
+\begin{center}
+$
+A^n=
+\begin{bmatrix}
+\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta\\
+\end{bmatrix}^n
+=
+\begin{bmatrix}
+\cos n\theta&-\sin n\theta\\
+\sin n\theta&\cos n\theta\\
+\end{bmatrix}
+$. \\
+\end{center}
+Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors (columns of $S$) are (1,$i$) and ($i$,1). You need to know Euler's formula $e^{i\theta}=\cos\theta+i\sin\theta$.
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.36 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.3}
+\begin{enumerate}
+\item[6.3.1]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.3.1 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.4}
+\begin{enumerate}
+\item[6.4.4] Find an orthogonal matrix $Q$ that diagonalizes $A=
+\begin{bmatrix}
+-2&6\\
+6&7\\
+\end{bmatrix}$. What is $\Lambda$?
+\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.4.6] Find \textit{all} orthogonal matrices that diagonalize $A = 
+\begin{bmatrix}
+9&12\\
+12&16\\
+\end{bmatrix}$. \\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.6 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.4.11] Write $A$ and $B$ in the form $\lambda_1x_1x_1^T+\lambda_2x_2x_2^T$ of the spectral theorem $Q \Lambda Q^T$: \\
+\begin{center}
+$
+A=
+\begin{bmatrix}
+3&1\\
+1&3\\
+\end{bmatrix}
+\hspace{8mm}
+B=
+\begin{bmatrix}
+9&12\\
+12&16\\
+\end{bmatrix}
+$
+\hspace{6mm} (keep $||x_1||=||x_2||=1$). \\
+\end{center}
+\vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.11 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\item[6.4.21] \textbf{True} (with reason) or \textbf{false} (with example). "Orthonormal" is not assumed. \\ \vspace{2mm}
+{\addtolength{\leftskip}{10mm}
+(a) A matrix with real eigenvalues and eigenvectors is symmetric.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21a ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(b) A matrix with real eigenvalues and orthogonal eigenvectors is symmetric.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21b ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) The inverse of a symmetric matrix is symmetric.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21c ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(d) The eigenvector matrix $S$ of a symmetric matrix is symmetric.\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21d ~~~~~~~~~~~~~~~~~~~~~~~~
+{\addtolength{\leftskip}{5mm}
+. \\
+}
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.5}
+\begin{enumerate}
+\item[6.5.7]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.5.7 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.6}
+\begin{enumerate}
+\item[6.6.17]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.6.17 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\vspace{5mm}
+\textbf{Chapter 6.7}
+\begin{enumerate}
+\item[6.7.4]  .\\ \vspace{2mm}
+%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.7.4 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\vspace{3mm}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{enumerate}
+\end{document}  
