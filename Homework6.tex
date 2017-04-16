@@ -551,8 +551,36 @@ C is a rank one matrix, meaning that two of its $\lambda$'s are zero. The last $
 1\\
 \end{bmatrix}$, use $S \Lambda S^{-1}$ to find $A$. No other matrix has the same $\lambda$'s and $x$'s. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.2 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+\begin{center}
+$S \Lambda S^{-1}=
+\begin{bmatrix}
+1&1\\
+0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+2&0\\
+0&5\\
+\end{bmatrix}
+\begin{bmatrix}
+1&-1\\
+0&1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+2&5\\
+0&5\\
+\end{bmatrix}
+\begin{bmatrix}
+1&-1\\
+0&1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+2&3\\
+0&5\\
+\end{bmatrix}
+=A$
+\end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 \item[6.2.8] Diagonalize the Fibonacci matrix by completing $S^{-1}$: \\
@@ -584,7 +612,61 @@ Do the multiplication $S \Lambda S^{-1}
 \end{bmatrix}$ to find its second component. This is the \textit{k}th Fibonacci number $F_k=(\lambda_1^k-\lambda_2^k)/(\lambda_1-\lambda_2)$.
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.8 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+S^{-1}=
+\frac{1}{\lambda_1-\lambda_2}
+\begin{bmatrix}
+1&-\lambda_2\\
+-1&\lambda_1\\
+\end{bmatrix}
+$ \\
+$
+S \Lambda^kS^{-1}=
+\frac{1}{\lambda_1-\lambda_2}
+\begin{bmatrix}
+\lambda_1&\lambda_2\\
+1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_1^k&0\\
+0&\lambda_2^k\\
+\end{bmatrix}
+\begin{bmatrix}
+1&-\lambda_2\\
+-1&\lambda_1\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+\hspace{3mm}
+\rightarrow
+\hspace{3mm}
+\frac{1}{\lambda_1-\lambda_2}
+\begin{bmatrix}
+\lambda_1^{k+1}&\lambda_2^{k+1}\\
+\lambda_1^k&\lambda_2^k\\
+\end{bmatrix}
+\begin{bmatrix}
+1&-\lambda_2\\
+-1&\lambda_1\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+$ \\
+$
+\rightarrow
+\hspace{4mm}
+\frac{1}{\lambda_1-\lambda_2}
+\begin{bmatrix}
+\lambda_1^{k+1}-\lambda_2^{k+1}\\
+\lambda_1^k-\lambda_2^k\\
+\end{bmatrix}
+$
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -611,16 +693,84 @@ $. \\
 {\addtolength{\leftskip}{10mm}
 (a) Find the eigenvalues and eigenvectors of $A$. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9a ~~~~~~~~~~~~~~~~~~~~~~~~
-{\addtolength{\leftskip}{5mm}
-. \\
-}
+\begin{center}
+$
+A=
+\begin{bmatrix}
+\frac{1}{2}&\frac{1}{2}\\
+1&0\\
+\end{bmatrix}
+\hspace{6mm}
+|A-\lambda |=
+\begin{vmatrix}
+\frac{1}{2}-\lambda&\frac{1}{2}\\
+1&-\lambda\\
+\end{vmatrix}
+$ \\
+$
+\rightarrow
+\hspace{3mm}
+(\lambda-1)(\lambda+\frac{1}{2})=0
+\hspace{3mm}
+\lambda = 1, \frac{1}{2}
+$ \\
+$
+\lambda = 1 \hspace{8mm}
+\begin{bmatrix}
+-\frac{1}{2}&\frac{1}{2}\\
+1&-1\\
+\end{bmatrix}
+x_1=0
+\hspace{5mm}
+x_1=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$ \\
+$
+\lambda = \frac{1}{2} \hspace{8mm}
+\begin{bmatrix}
+1&\frac{1}{2}\\
+1&\frac{1}{2}\\
+\end{bmatrix}
+x_2=0
+\hspace{5mm}
+x_2=
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+$ \\
+\end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-(b) Find the limist as $n \rightarrow \infty$ of the matrices $A^n=S \Lambda S^{-1}$. \\ \vspace{2mm}
+(b) Find the limit as $n \rightarrow \infty$ of the matrices $A^n=S \Lambda S^{-1}$. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.9b ~~~~~~~~~~~~~~~~~~~~~~~~
-{\addtolength{\leftskip}{5mm}
-. \\
-}
+\begin{center}
+$
+A^{\infty}=
+\begin{bmatrix}
+1&1\\
+1&-2\\
+\end{bmatrix}
+\begin{bmatrix}
+1&0\\
+0&0\\
+\end{bmatrix}
+\frac{1}{3}
+\begin{bmatrix}
+2&1\\
+1&-1\\
+\end{bmatrix}
+=
+\frac{1}{3}
+\begin{bmatrix}
+2&1\\
+2&1\\
+\end{bmatrix}
+$ \\
+\end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) If $G_0=0$ and $G_1=1$ show that the Gibonacci numbers approach $\frac{2}{3}$. \\ \vspace{2mm}
@@ -633,8 +783,9 @@ $. \\
 }
 \item[6.2.10] Prove that every third Fibonacci number in 0,1,1,2,3,... is even.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.10 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{\addtolength{\leftskip}{5mm}
+The fibonacci pattern is odd number + even number then odd number plus odd number, which produces an even number every third term. \\
+}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.2.11] True or false: If the eigenvalues of $A$ are 2,2,5 then the matrix is certainly \\ 
@@ -643,8 +794,9 @@ $. \\
 \end{center}
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.11 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{\addtolength{\leftskip}{5mm}
+(a) true, no zero eigenvalue \hspace{4mm} (b) false, eigenvalues are repeated \\ (c) false, repeated eigenvalues may have different eigenvectors \\
+}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.2.15] $A^k=S \Lambda S^{-1}$ approaches the zero matrix as $k \rightarrow \infty$ if and only if every $\lambda$ has absolute value less than \underline{\hspace{10mm}}. Which of these matrices has $A^k \rightarrow 0$? \\ 
@@ -667,13 +819,74 @@ $. \\
 \end{center}
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.15 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{\addtolength{\leftskip}{5mm}
+$A^k=S \Lambda S^{-1}$ approaches the zero matrix as $k \rightarrow \infty$ if and only if every $\lambda$ has absolute value less than \underline{\hspace{3mm}1\hspace{3mm}}. $A_2$ has $A_2^k \rightarrow 0$ with $\lambda =.3,.9$. \\
+}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.2.16] (Recommended) Find $\Lambda$ and $S$ to diagonalize $A_1$ in Problem 15. What is the limit of $\Lambda^k$ as $k \rightarrow \infty$? What is the limit of $S \Lambda^k S^{-1}$? In the columns of this limiting matrix you see the \underline{\hspace{10mm}}. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.16 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+|A-\lambda I|=\lambda^2-.7\lambda-.3=0 \hspace{5mm} \lambda=1,-.3
+$ \\
+$
+\lambda = 1 \hspace{8mm}
+\begin{bmatrix}
+-.4&.9\\
+.4&-.9\\
+\end{bmatrix}
+x_1=0
+\hspace{5mm}
+x_1=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$ \\
+$
+\lambda = -.3 \hspace{8mm}
+\begin{bmatrix}
+.9&.9\\
+.4&.4\\
+\end{bmatrix}
+x_2=0
+\hspace{5mm}
+x_2=
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+$ \\
+$
+\Lambda =
+\begin{bmatrix}
+1&0\\
+0&-.3\\
+\end{bmatrix}
+\hspace{5mm}
+S=
+\begin{bmatrix}
+1&1\\
+1&-1\\
+\end{bmatrix}
+$ \\
+$
+\Lambda^k \hspace{3mm} \rightarrow \hspace{3mm}
+\begin{bmatrix}
+1&0\\
+0&0\\
+\end{bmatrix}
+$ \\
+$
+S \Lambda^k S^{-1} \hspace{3mm} \rightarrow \hspace{3mm}
+\frac{1}{2}
+\begin{bmatrix}
+1&1\\
+1&1\\
+\end{bmatrix}
+$ In the columns of this limiting matrix you see the \underline{\hspace{3mm}steady state\hspace{3mm}}. \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -697,8 +910,72 @@ $. \\
 \end{center}
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.19 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+\begin{center}
+$
+|B-\lambda I|=(5-\lambda)(4-\lambda)=0 \hspace{8mm} \lambda=4,5
+$ \\
+$
+\lambda=4 \hspace{8mm} 
+\begin{bmatrix}
+1&1\\
+0&0\\
+\end{bmatrix}
+x_1=0
+\hspace{5mm}
+x_1=
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+\hspace{15mm}
+\lambda=5 \hspace{8mm} 
+\begin{bmatrix}
+0&1\\
+0&-1\\
+\end{bmatrix}
+x_2=0
+\hspace{5mm}
+x_2=
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix}
+$ \\
+$
+B=
+\begin{bmatrix}
+1&1\\
+-1&0\\
+\end{bmatrix}
+\begin{bmatrix}
+5&0\\
+0&4\\
+\end{bmatrix}
+\begin{bmatrix}
+0&-1\\
+1&1\\
+\end{bmatrix}
+\hspace{15mm}
+S \Lambda^k S^{-1}=
+\begin{bmatrix}
+1&1\\
+-1&0\\
+\end{bmatrix}
+\begin{bmatrix}
+5^k&0\\
+0&4^k\\
+\end{bmatrix}
+\begin{bmatrix}
+0&-1\\
+1&1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+5^k&5^k-4^k\\
+0&4^k\\
+\end{bmatrix}
+$
+\end{center}
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[6.2.36] The \textit{n}th power of rotation through $\theta$ is rotation through $n \theta$: \\ 
@@ -719,7 +996,43 @@ $. \\
 Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors (columns of $S$) are (1,$i$) and ($i$,1). You need to know Euler's formula $e^{i\theta}=\cos\theta+i\sin\theta$.
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.2.36 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+|A-\lambda I| = (\cos\theta-\lambda)^2+\sin^2\theta=0
+\hspace{4mm} \rightarrow \hspace{4mm}
+\lambda^2-2\cos\theta\lambda+1=0 \hspace{8mm} \lambda=e^{-i\theta},e^{i\theta}
+$ \\
+$
+A^n=
+\begin{bmatrix}
+1&1\\
+-i&i\\
+\end{bmatrix}
+\begin{bmatrix}
+e^{in\theta}&0\\
+0&e^{-in\theta}\\
+\end{bmatrix}
+\frac{1}{2i}
+\begin{bmatrix}
+i&-1\\
+i&1\\
+\end{bmatrix}
+$ \\
+$
+\rightarrow
+\hspace{5mm}
+\frac{1}{2i}
+\begin{bmatrix}
+ie^{in\theta}+ie^{-in\theta}&ie^{-in\theta}-ie^{in\theta}\\
+e^{in\theta}-e^{-in\theta}&2e^{in\theta}\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos n\theta&-\sin n\theta\\
+\sin n\theta&\cos n\theta\\
+\end{bmatrix}
+$ \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -744,7 +1057,55 @@ Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors 
 \end{bmatrix}$. What is $\Lambda$?
 \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.4 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+|A- \lambda I|=
+(\lambda-10)(\lambda+5) = 0
+\hspace{8mm} \lambda=10,-5
+$\\
+$
+\lambda = 10 \hspace{8mm}
+\begin{bmatrix}
+-12&6\\
+6&-3\\
+\end{bmatrix}
+x_1=0
+\hspace{5mm}
+x_1 = 
+\begin{bmatrix}
+1\\
+2\\
+\end{bmatrix}
+$ \\
+$
+\lambda = -5 \hspace{8mm}
+\begin{bmatrix}
+3&6\\
+6&12\\
+\end{bmatrix}
+x_2=0
+\hspace{5mm}
+x_2 = 
+\begin{bmatrix}
+2\\
+-1\\
+\end{bmatrix}
+$ \\
+$
+\Lambda = 
+\begin{bmatrix}
+10&0\\
+0&-5\\
+\end{bmatrix}
+\hspace{10mm}
+Q=
+\frac{1}{\sqrt{5}}
+\begin{bmatrix}
+1&2\\
+2&-1\\
+\end{bmatrix}
+$ \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -754,7 +1115,47 @@ Prove that neat formula by diagonalizing $A=S \Lambda S^{-1}$. The eigenvectors 
 12&16\\
 \end{bmatrix}$. \\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.6 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+|A-\lambda I| = \lambda^2-25\lambda=0 \hspace{8mm} \lambda=0,25
+$ \\
+$
+\lambda = 0 \hspace{8mm}
+\begin{bmatrix}
+9&12\\
+12&16\\
+\end{bmatrix}
+x_1=0
+\hspace{5mm}
+x_1 = 
+\begin{bmatrix}
+\frac{4}{5}\\
+-\frac{3}{5}\\
+\end{bmatrix}
+$ \\
+$
+\lambda = 25 \hspace{8mm}
+\begin{bmatrix}
+-16&12\\
+12&-9\\
+\end{bmatrix}
+x_2=0
+\hspace{5mm}
+x_2 = 
+\begin{bmatrix}
+\frac{3}{5}\\
+\frac{4}{5}\\
+\end{bmatrix}
+$ \\
+$
+Q=
+\frac{1}{5}
+\begin{bmatrix}
+4&3\\
+-3&4\\
+\end{bmatrix}
+$ and all other combination of those columns with and without their signs reversed. \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -777,7 +1178,119 @@ $
 \end{center}
 \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.11 ~~~~~~~~~~~~~~~~~~~~~~~~
-
+\begin{center}
+$
+|A-\lambda I|=(\lambda-4)(\lambda-2)=0
+\hspace{8mm}
+\lambda=4,2
+$ \\
+$
+\lambda = 4 \hspace{8mm}
+\begin{bmatrix}
+-1&1\\
+1&-1\\
+\end{bmatrix}
+x_1=0
+\hspace{5mm}
+x_1 = 
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+\hspace{5mm}
+\hat{x}_1=
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+$ \\
+$
+\lambda = 2 \hspace{8mm}
+\begin{bmatrix}
+1&1\\
+1&1\\
+\end{bmatrix}
+x_2=0
+\hspace{5mm}
+x_2 = 
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+\hspace{5mm}
+\hat{x}_2=
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+$ \\
+$
+A=4\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1\\
+1\\
+\end{bmatrix}
+2\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1&1\\
+\end{bmatrix}
++2\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+2\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1&-1\\
+\end{bmatrix}
+=
+2
+\begin{bmatrix}
+1&1\\
+1&1\\
+\end{bmatrix}
++
+\begin{bmatrix}
+1&-1\\
+-1&1\\
+\end{bmatrix}
+$ \\ \vspace{2mm}
+$B$'s eigenvalues and vectors were found in problem 6.4.6 \\
+$
+B=0*\frac{1}{5}
+\begin{bmatrix}
+4\\
+-3\\
+\end{bmatrix}
+\frac{1}{5}
+\begin{bmatrix}
+4&-3\\
+\end{bmatrix}
++
+25*\frac{1}{5}
+\begin{bmatrix}
+3\\
+4\\
+\end{bmatrix}
+\frac{1}{5}
+\begin{bmatrix}
+3&4\\
+\end{bmatrix}
+=
+0*1/25
+\begin{bmatrix}
+16&-12\\
+-12&9\\
+\end{bmatrix}
++
+\begin{bmatrix}
+9&12\\
+12&16\\
+\end{bmatrix}
+$ \\
+\end{center}
 
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -786,37 +1299,84 @@ $
 (a) A matrix with real eigenvalues and eigenvectors is symmetric.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21a ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+False,
+$
+\begin{bmatrix}
+4&3\\
+0&1\\
+\end{bmatrix}
+$
+has $\lambda$=1,4 with eigenvectors 
+$
+\begin{bmatrix}
+1\\
+0\\
+\end{bmatrix},
+\begin{bmatrix}
+1\\
+-1\\
+\end{bmatrix}
+$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (b) A matrix with real eigenvalues and orthogonal eigenvectors is symmetric.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21b ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+True, $A=Q \Lambda Q^T \rightarrow A^T=(Q \Lambda Q^T)^T={Q^T}^T \Lambda^T Q^T=Q \Lambda Q^T$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (c) The inverse of a symmetric matrix is symmetric.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21c ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+True, $A=Q \Lambda Q^T \rightarrow A^{-1}=(Q \Lambda Q^T)^{-1}={Q^T}^{-1} \Lambda^{-1} Q^{-1}=Q \Lambda^{-1} Q^T$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (d) The eigenvector matrix $S$ of a symmetric matrix is symmetric.\\ \vspace{2mm}
 %~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21d ~~~~~~~~~~~~~~~~~~~~~~~~
 {\addtolength{\leftskip}{5mm}
-. \\
+False, 
+$
+A=
+\begin{bmatrix}
+-1&1\\
+1&-1\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1&1\\
+-1&1\\
+\end{bmatrix}
+\begin{bmatrix}
+-2&0\\
+0&0\\
+\end{bmatrix}
+\frac{1}{2}
+\begin{bmatrix}
+1&-1\\
+1&1\\
+\end{bmatrix}
+\hspace{4mm}
+S=
+\begin{bmatrix}
+1&1\\
+-1&1\\
+\end{bmatrix}
+\hspace{2mm}
+\neq
+\hspace{2mm}
+S^{-1}=
+\begin{bmatrix}
+1&-1\\
+1&1\\
+\end{bmatrix}
+$. \\
 }
 \vspace{3mm}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-}
-%~~~~~~~~~~~~~~~~~~~~~ ANSWER TO 6.4.21 ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-\vspace{3mm}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+} 
 \end{enumerate}
 \vspace{5mm}
 \textbf{Chapter 6.5}
